@@ -2,10 +2,10 @@
 
 import string
 # Hint: Use these string constants to encode/decode hexadecimal digits and more
-string.digits is '0123456789'
-string.hexdigits is '0123456789abcdefABCDEF'
-string.ascii_lowercase is 'abcdefghijklmnopqrstuvwxyz'
-string.ascii_uppercase is 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+# string.digits is '0123456789'
+# string.hexdigits is '0123456789abcdef   ABCDEF'
+# string.ascii_lowercase is 'abcdefghijklmnopqrstuvwxyz'
+# string.ascii_uppercase is 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 # string.ascii_letters is ascii_lowercase + ascii_uppercase
 # string.printable is digits + ascii_letters + punctuation + whitespace
 
@@ -19,9 +19,10 @@ def decode(digits, base):
     # assert int(digits) is int
     assert 2 <= base <= 36, 'base is out of range: {}'.format(base)
     # TODO: Decode digits from binary (base 2)
+    result = 0
+
     if base == 2:  # The base is 2
         digits = digits[::-1]  # Reassign the digits in reverse order and convert it to integer
-        result = 0
         for i in range(len(digits)):
             current_bit = int(digits[i])
             if current_bit == 1:
@@ -30,7 +31,19 @@ def decode(digits, base):
         return result
 
     # TODO: Decode digits from hexadecimal (base 16)
-    # ...
+    if base == 16:
+        digits = digits[::-1]
+        for power in range(len(digits)):
+            power_value = 16**power
+            char = digits[power]  # Assign the character of the specific power
+            numerical_value = string.hexdigits.find(char)  # Find the numerical value of the character
+            product = power_value * numerical_value
+            result += product
+
+        return result
+
+
+
     # TODO: Decode digits from any base (2 up to 36)
     # ...
 
@@ -44,14 +57,17 @@ def encode(number, base):
     assert 2 <= base <= 36, 'base is out of range: {}'.format(base)
     # Handle unsigned numbers only for now
     assert number >= 0, 'number is negative: {}'.format(number)
+    if number == 0:
+        return "0"
+
     # TODO: Encode number in binary (base 2)
     if base == 2:
         binary_str = ''
         current_power = 0
         power_array = []
-        not_finished = True
+        finished = False
 
-        while not_finished:
+        while finished is False:
             bit_value = 2**current_power
             if bit_value < number:  # Current power is less than the number
                 power_array.insert(0, current_power)
@@ -59,10 +75,10 @@ def encode(number, base):
 
             elif bit_value == number:  # Current power is equal to the number
                 power_array.insert(0, current_power)
-                not_finished = False
+                finished = False
 
             else:  # The current power is more than the number
-                not_finished = False
+                finished = False
 
         for power in power_array:
             value = 2**power
@@ -76,7 +92,34 @@ def encode(number, base):
         return binary_str
 
     # TODO: Encode number in hexadecimal (base 16)
-    # ...
+    if base == 16:
+        hex_str = ""
+        current_power = 0
+        list_of_powers = []  # List of all the possible power but it will be sorted from the greatest to lowest
+        finished = False
+        while finished is False:  # Get all the possible power for the number
+            base_value = 16**current_power
+            if base_value < number:
+                list_of_powers.insert(0, current_power)
+                current_power += 1
+
+            elif base_value == number:  # Current power is equal to the number
+                list_of_powers.insert(0, current_power)
+                finished = True
+
+            else:  # The current power is more than the number
+                finished = True
+
+        for power in list_of_powers:
+            current_value = 16**power
+            limit = int(number / current_value)  # How many of one power can go into the number
+
+            number -= current_value * limit
+
+            hex_str += string.hexdigits[limit]
+
+        return hex_str
+
     # TODO: Encode number in any base (2 up to 36)
     # ...
 
@@ -115,7 +158,10 @@ def main():
         print('Usage: {} digits base1 base2'.format(sys.argv[0]))
         print('Converts digits from base1 to base2')
 
-print(encode(698, 2))
+
+print(decode("23ceadf", 16))
+
+# print(encode(15, 2))
 
 # print(decode('101101', 2))
 
