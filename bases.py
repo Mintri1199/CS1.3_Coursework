@@ -64,16 +64,15 @@ def decode(digits, base):
         power = len(digits) - 1
 
     for character in digits:
-
         if character == '.':
             pass
         else:
             char_index = string.printable.index(character)
             result += (base ** power) * char_index
-
             power -= 1
 
     return result
+
 #
 #
 # def encode(number, base):
@@ -133,7 +132,7 @@ def encode(number, base):
     fractional = number - integral
     print(number - integral)
     while integral > 0:
-        div_tup = divmod(integral, base)   # This was the problem you had number instead of dividend
+        div_tup = divmod(integral, base)   # Return a tuple of (quotient, remainder)
         integral = div_tup[0]
         result = str(string.printable[div_tup[1]]) + result
 
@@ -164,9 +163,9 @@ def convert(digits, base1, base2):
     assert 2 <= base1 <= 36, 'base1 is out of range: {}'.format(base1)
     assert 2 <= base2 <= 36, 'base2 is out of range: {}'.format(base2)
     # Check if the digits has any invalid character for base 1
-    if any(c not in string.printable[: base1] for c in digits):  # Generator expression
-        print('Invalid characters for base1: {}'.format(base1))
-        return
+    # if any(c not in string.printable[: base1] for c in digits):  # Generator expression
+    #     print('Invalid characters for base1: {}'.format(base1))
+    #     return
 
     number = decode(digits, base1)
     converted_str = encode(number, base2)
@@ -193,4 +192,5 @@ def main():
 if __name__ == '__main__':
     main()
 
-print(encode(581.35, 32))
+print(decode('10110.101', 2))
+# print(encode(134.34, 16))
