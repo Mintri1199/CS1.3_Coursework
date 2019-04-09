@@ -24,11 +24,12 @@ def linear_search_recursive(array, item, index=0):
 
     # If the index is equal to the array
     # Which mean that the program has gone through the array but haven't found the item
-    array_length = len(array)
-    if index == array_length:
+    if index >= len(array):
         return None
 
-    if array[index] != item:
+    # If the item at index is not the target
+    elif array[index] != item:
+        # Call it again but with a incremented index
         return linear_search_recursive(array, item, index + 1)
     else:
         return index
@@ -51,11 +52,8 @@ def binary_search_iterative(array, item):
 
     while end_point >= starting_point:
         # The middle index of the array if the average of two end points
-        middle_index = int((starting_point + end_point) / 2)
+        middle_index = (starting_point + end_point) // 2
 
-        # Did not found the item in the array
-        # if middle_index == 0:
-        #     return None
         # Check if the middle index is the item first
         if array[middle_index] == item:
             return middle_index
@@ -65,11 +63,10 @@ def binary_search_iterative(array, item):
             end_point = middle_index - 1
 
         # The item of the middle index is less in ascii value
-        elif array[middle_index] < item:
+        else:
             starting_point = middle_index + 1
 
-        else:
-            return None
+    return None
 
 
 def binary_search_recursive(array, item, left=None, right=None):
@@ -79,12 +76,9 @@ def binary_search_recursive(array, item, left=None, right=None):
 
     # Getting the middle index of the array
 
-    if left == None:
+    if left is None and right is None:
         left = 0
-
-    if right == None:
-        right = len(array) -1
-
+        right = len(array) - 1
 
     if right >= left:
         middle_index = int((left + right) / 2)
@@ -94,11 +88,13 @@ def binary_search_recursive(array, item, left=None, right=None):
 
         elif array[middle_index] > item:
             return binary_search_recursive(array, item, left, middle_index - 1)
+
         else:
             return binary_search_recursive(array, item, middle_index + 1, right)
+
     else:
         return None
 
 
-names = ['Alex', 'Brian', 'Julia', 'Kojin', 'Nabil', 'Nick', 'Winnie']
-print(binary_search(names, 'Kojin'))
+names = ['Alex', 'Brian', 'Julia', 'Kojin', 'Nabil', 'Nick']
+print(binary_search(names, 'AAA'))

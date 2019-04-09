@@ -17,11 +17,14 @@ def factorial_iterative(n):
     # TODO: implement the factorial function iteratively here
     # once implemented, change factorial (above) to call factorial_iterative
     # to verify that your iterative implementation passes all tests
+
     result = 1
     while n > 1:
+        # Increment result by multiplying n
         result *= n
         n -= 1
     return result
+
 
 def factorial_recursive(n):
     # check if n is one of the base cases
@@ -47,4 +50,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-print(factorial(4))
+print(factorial_iterative(0))

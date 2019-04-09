@@ -1,6 +1,9 @@
 [
-  "recursion_test.py::RecursionTest::test_factorial_with_floating_point_numbers",
-  "recursion_test.py::RecursionTest::test_factorial_with_large_integers",
-  "recursion_test.py::RecursionTest::test_factorial_with_negative_integers",
-  "recursion_test.py::RecursionTest::test_factorial_with_small_integers"
+  "palindromes_test.py::TestPalindromes::test_is_palindrome_with_mirrored_strings",
+  "palindromes_test.py::TestPalindromes::test_is_palindrome_with_mixed_casing",
+  "palindromes_test.py::TestPalindromes::test_is_palindrome_with_mixed_casing_and_punctuation",
+  "palindromes_test.py::TestPalindromes::test_is_palindrome_with_non_palindromic_strings",
+  "palindromes_test.py::TestPalindromes::test_is_palindrome_with_whitespace",
+  "palindromes_test.py::TestPalindromes::test_is_palindrome_with_whitespace_and_mixed_casing",
+  "palindromes_test.py::TestPalindromes::test_is_palindrome_with_whitespace_and_punctuation"
 ]
