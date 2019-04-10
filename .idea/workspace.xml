@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9672c880-565f-4ea1-9b25-fd977d7036e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/palindromes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/palindromes_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reworked_strings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursion.py" beforeDir="false" afterPath="$PROJECT_DIR$/recursion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strings_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/strings_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,68 +28,58 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="py" value="17" />
+          <entry key="py" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Git file" value="1" />
-          <entry key="Python" value="17" />
+          <entry key="Python" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="130" />
-          <entry key="py" value="10996" />
+          <entry key="py" value="12524" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="11126" />
+          <entry key="Python" value="12654" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/palindromes.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/strings_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="-1132">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
               <folding>
-                <marker date="1554847293476" expanded="true" signature="798:799" ph="..." />
+                <element signature="e#11#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/strings.py">
+        <entry file="file://$PROJECT_DIR$/reworked_strings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="-891">
+              <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="23" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/strings_test.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/palindromes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bases.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+            <state relative-caret-position="139">
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
-                <marker date="1554327075033" expanded="true" signature="3005:3012" ph="..." />
-                <marker date="1554327075033" expanded="true" signature="4398:4400" ph="..." />
+                <marker date="1554847859479" expanded="true" signature="798:799" ph="..." />
               </folding>
             </state>
           </provider>
@@ -137,13 +127,14 @@
         <option value="$PROJECT_DIR$/string.py" />
         <option value="$PROJECT_DIR$/string_test.py" />
         <option value="$PROJECT_DIR$/palindromes_test.py" />
-        <option value="$PROJECT_DIR$/strings_test.py" />
-        <option value="$PROJECT_DIR$/strings.py" />
         <option value="$PROJECT_DIR$/palindromes.py" />
+        <option value="$PROJECT_DIR$/strings.py" />
+        <option value="$PROJECT_DIR$/strings_test.py" />
+        <option value="$PROJECT_DIR$/reworked_strings.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1133" />
@@ -195,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.palindromes">
+  <component name="RunManager" selected="Python tests.Unittests for strings_test.StringsTest">
     <configuration name="palindromes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="course_works" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,7 +208,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="search" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="reworked_strings" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="course_works" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -229,7 +220,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reworked_strings.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -238,7 +229,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for search_test.SearchTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="strings" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="course_works" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/strings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for palindromes_test.TestPalindromes.test_is_palindrome_with_whitespace" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="course_works" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,11 +260,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;search_test.SearchTest&quot;" />
+      <option name="_new_target" value="&quot;palindromes_test.TestPalindromes.test_is_palindrome_with_whitespace&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in palindromes_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for strings_test.StringsTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="course_works" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -262,38 +274,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/palindromes_test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in recursion_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="course_works" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/recursion_test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;strings_test.StringsTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.search" />
-      <item itemvalue="Python tests.Unittests in recursion_test.py" />
-      <item itemvalue="Python tests.Unittests for search_test.SearchTest" />
       <item itemvalue="Python.palindromes" />
-      <item itemvalue="Python tests.Unittests in palindromes_test.py" />
+      <item itemvalue="Python tests.Unittests for palindromes_test.TestPalindromes.test_is_palindrome_with_whitespace" />
+      <item itemvalue="Python.strings" />
+      <item itemvalue="Python.reworked_strings" />
+      <item itemvalue="Python tests.Unittests for strings_test.StringsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for strings_test.StringsTest" />
+        <item itemvalue="Python.reworked_strings" />
+        <item itemvalue="Python.strings" />
         <item itemvalue="Python.palindromes" />
-        <item itemvalue="Python tests.Unittests in palindromes_test.py" />
-        <item itemvalue="Python tests.Unittests for search_test.SearchTest" />
-        <item itemvalue="Python tests.Unittests in recursion_test.py" />
-        <item itemvalue="Python.search" />
+        <item itemvalue="Python tests.Unittests for palindromes_test.TestPalindromes.test_is_palindrome_with_whitespace" />
       </list>
     </recent_temporary>
   </component>
@@ -311,21 +309,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_bases_test_py - 2019.04.02 at 11h 14m 00s.xml">
-      <configuration name="Unittests in bases_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_bases_test_py - 2019.04.02 at 11h 16m 21s.xml">
-      <configuration name="Unittests in bases_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_recursion_test_py - 2019.04.08 at 14h 58m 18s.xml">
-      <configuration name="Unittests in recursion_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_search_test_SearchTest - 2019.04.08 at 15h 01m 47s.xml">
-      <configuration name="Unittests for search_test.SearchTest" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_palindromes_test_py - 2019.04.09 at 13h 53m 34s.xml">
-      <configuration name="Unittests in palindromes_test.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_palindromes_test_py - 2019.04.09 at 13h 53m 40s.xml">
       <configuration name="Unittests in palindromes_test.py" configurationId="tests" />
     </history-entry>
@@ -334,6 +317,27 @@
     </history-entry>
     <history-entry file="Unittests_in_palindromes_test_py - 2019.04.09 at 13h 58m 37s.xml">
       <configuration name="Unittests in palindromes_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_palindromes_test_TestPalindromes_test_is_palindrome_with_whitespace - 2019.04.09 at 15h 02m 54s.xml">
+      <configuration name="Unittests for palindromes_test.TestPalindromes.test_is_palindrome_with_whitespace" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_palindromes_test_TestPalindromes_test_is_palindrome_with_whitespace - 2019.04.09 at 15h 03m 10s.xml">
+      <configuration name="Unittests for palindromes_test.TestPalindromes.test_is_palindrome_with_whitespace" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_strings_test_StringsTest - 2019.04.09 at 15h 45m 15s.xml">
+      <configuration name="Unittests for strings_test.StringsTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_strings_test_StringsTest - 2019.04.09 at 15h 47m 12s.xml">
+      <configuration name="Unittests for strings_test.StringsTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_strings_test_StringsTest - 2019.04.09 at 15h 47m 31s.xml">
+      <configuration name="Unittests for strings_test.StringsTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_strings_test_StringsTest - 2019.04.09 at 15h 54m 56s.xml">
+      <configuration name="Unittests for strings_test.StringsTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_strings_test_StringsTest - 2019.04.09 at 15h 54m 59s.xml">
+      <configuration name="Unittests for strings_test.StringsTest" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -346,20 +350,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1133" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1133" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11585045" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11585045" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32949087" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32949087" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35446686" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35446686" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32949087" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" x="10" y="77" width="1899" height="1025" id="Terminal" order="8" weight="0.32949087" />
+      <window_info anchor="bottom" x="10" y="77" width="1899" height="1025" id="Terminal" order="8" visible="true" weight="0.32949087" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32949087" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -377,6 +382,11 @@
           <url>file://$PROJECT_DIR$/palindromes.py</url>
           <line>60</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/reworked_strings.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -447,6 +457,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/palindromes_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -456,6 +473,16 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strings.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/bases.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -468,33 +495,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/string.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strings_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="-1132">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="e#11#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/strings.py">
+    <entry file="file://$PROJECT_DIR$/reworked_strings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="-891">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="23" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/palindromes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="139">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
-            <marker date="1554847293476" expanded="true" signature="798:799" ph="..." />
+            <marker date="1554847859479" expanded="true" signature="798:799" ph="..." />
           </folding>
         </state>
       </provider>

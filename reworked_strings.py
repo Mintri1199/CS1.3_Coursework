@@ -1,9 +1,29 @@
-
 def contains(text, pattern):
     """Return a boolean indicating whether pattern occurs in text."""
     assert isinstance(text, str), 'text is not a string: {}'.format(text)
     assert isinstance(pattern, str), 'pattern is not a string: {}'.format(text)
-    # TODO: Implement contains here (iteratively and/or recursively)
+    # cheating way
+    # return pattern in text
+
+    if len(pattern) == 0:
+        return True
+
+    current_index = 0  # Keep track of the current character of the pattern
+
+    for char in text:
+
+        if char == pattern[current_index]:
+            # increment the current index
+            current_index += 1
+
+            if current_index >= len(pattern):  # The pattern has been found
+                return True
+        else:
+            current_index = 0  # Reset the current index
+            if char == pattern[current_index]:  # check if the current character still match the first char of pattern
+                current_index += 1
+
+    return False
 
 
 def find_index(text, pattern):
@@ -12,6 +32,24 @@ def find_index(text, pattern):
     assert isinstance(text, str), 'text is not a string: {}'.format(text)
     assert isinstance(pattern, str), 'pattern is not a string: {}'.format(text)
     # TODO: Implement find_index here (iteratively and/or recursively)
+    found_index = None
+    current_index = 0
+
+    for index, char in enumerate(text):
+        if char == pattern[current_index]:
+            if found_index == None:
+                found_index = index
+
+            current_index += 1
+
+            if current_index >= len(pattern):
+                return True
+        else:
+            current_index = 0
+            found_index = None
+            if char == pattern[current_index]:
+                found_index = index
+                current_index += 1
 
 
 def find_all_indexes(text, pattern):
@@ -50,7 +88,8 @@ def main():
         print("find_index('abra cadabra', 'abra') => 0")
         print("find_all_indexes('abra cadabra', 'abra') => [0, 8]")
 
+#
+# if __name__ == '__main__':
+#     main()
 
-if __name__ == '__main__':
-    main()
-    
+print(contains('ababc', 'abc'))

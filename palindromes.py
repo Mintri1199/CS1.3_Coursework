@@ -62,18 +62,17 @@ def is_palindrome_recursive(text, left=None, right=None):
         return True
 
     # Assign the left and right once
-    if left == None and right == None:
+    if left is None and right is None:
         left = 0
         right = len(text) - 1
 
     # Keep moving the left index to the right until the character is a letter
-    while text[left] in string.punctuation + " ":
+    while text[left] not in string.ascii_letters:
         left += 1
 
     # Keeping moving the right to the left until the character is a letter
-    while text[right] in string.punctuation + " ":
+    while text[right] not in string.ascii_letters:
         right -= 1
-
 
     if right >= left:
         if text[left].lower() == text[right].lower():
@@ -102,5 +101,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-print(is_palindrome("Taco? Cat."))
