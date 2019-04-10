@@ -13,8 +13,8 @@ def is_palindrome(text):
     # implement is_palindrome_iterative and is_palindrome_recursive below, then
     # change this to call your implementation to verify it passes all tests
     assert isinstance(text, str), 'input is not a string: {}'.format(text)
-    return is_palindrome_iterative(text)
-    # return is_palindrome_recursive(text)
+    # return is_palindrome_iterative(text)
+    return is_palindrome_recursive(text)
 
 
 def is_palindrome_iterative(text):
@@ -34,58 +34,61 @@ def is_palindrome_iterative(text):
     if len(text) == 0 or len(text) == 1:
         return True
 
-    # table = str.maketrans(dict.fromkeys(string.punctuation))
+    # table = str.maketrans(dict.fromkeys(string.punctuation))  O(n^2)
     #
-    # text = text.translate(table).replace(' ', '').lower()
+    # text = text.translate(table).replace(' ', '').lower()   O(n)  O(n)
     #
-    # left_index = 0
-    # right_index = len(text) - 1
+    # left_index = 0  O(1)
+    # right_index = len(text) - 1  O(1)
     #
     # while right_index >= left_index:
-    #     left_character = text[left_index]
-    #     right_character = text[right_index]
+    #     left_character = text[left_index]     O(1)
+    #     right_character = text[right_index]   O(1)
     #
     #     if left_character != right_character:
     #         return False
     #
-    #     left_index += 1
-    #     right_index -= 1
+    #     left_index += 1    O(1)
+    #     right_index -= 1   O(1)
     #
     # return True
-git
-    right_index = len(text) - 1
-    left_index = 0
-    left_character = text[left_index]
-    right_character = text[right_index]
+    right_index = len(text) - 1  # O(1)
+    left_index = 0  # O(1)
 
-    for i in range(len(text) // 2):
-        # Move the left index over right if the chacracter is not a letter
+    for i in range(len(text) // 2):  # O(n/2)
+        # Move the left index over right if the character is not a letter
 
-        if left_character not in string.ascii_letters and right_character not in string.ascii_letters:
-            if left_index + 1 >= right_index:
+        if validation(text, left_index, right_index):  # O(1)
+            return True
+
+        while text[left_index] not in string.ascii_letters:  # O(n)
+            left_index += 1  # O(1)
+
+            if validation(text, left_index, right_index):  # O(1)
                 return True
 
-        while left_character not in string.ascii_letters:
-            left_index += 1
-            left_character = text[left_index]
+        # Move the right index over left if the character is not a letter
+        while text[right_index] not in string.ascii_letters:  # O(n)
+            right_index -= 1  # O(1)
 
-        # Move the right index over left if the chacracter is not a letter
-        while right_character not in string.ascii_letters:
-            right_index -= 1
-            right_character = text[right_index]
+            if validation(text, left_index, right_index):  # O(1)
+                return True
 
-
-
-        if text[left_index].lower() != text[right_index].lower():
+        if text[left_index].lower() != text[right_index].lower():  # O(1)
             return False
 
-        left_index += 1
-        left_character = text[left_index]
-
-        right_index -= 1
-        right_character = text[right_index]
+        left_index += 1  # O(1)
+        right_index -= 1  # O(1)
 
     return True
+
+
+def validation(text, left, right):
+    if text[left] not in string.ascii_letters and text[right] not in string.ascii_letters:
+        if left + 1 >= right:
+            return True
+        else:
+            return False
 
 
 def is_palindrome_recursive(text, left=None, right=None):
@@ -104,9 +107,19 @@ def is_palindrome_recursive(text, left=None, right=None):
     while text[left] not in string.ascii_letters:
         left += 1
 
+        #  Check if all the character in the text is non letter character
+        #  Check if only one character in the text is a letter
+        if validation(text, left, right):
+            return True
+
     # Keeping moving the right to the left until the character is a letter
     while text[right] not in string.ascii_letters:
         right -= 1
+
+        #  Check if all the character in the text is non letter character
+        #  Check if only one character in the text is a letter
+        if validation(text, left, right):
+            return True
 
     if right >= left:
         if text[left].lower() == text[right].lower():
@@ -136,4 +149,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-print(is_palindrome("No, On!"))
+print(is_palindrome("!@#$%^&"))

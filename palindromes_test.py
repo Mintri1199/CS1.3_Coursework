@@ -14,6 +14,8 @@ class TestPalindromes(unittest.TestCase):
         assert is_palindrome('radar') is True
         assert is_palindrome('doggod') is True
         assert is_palindrome('racecar') is True
+        assert is_palindrome('!@#$%^') is True
+
 
     def test_is_palindrome_with_mixed_casing(self):
         # palindromes with mixed letter casing
@@ -79,6 +81,7 @@ class TestPalindromes(unittest.TestCase):
         assert is_palindrome('ABCDDCBZ') is False
         assert is_palindrome('AAAAZAAA') is False
         assert is_palindrome('AAAAAAAZ') is False
+        assert is_palindrome('!@ba%^b') is True
 
 
 if __name__ == '__main__':

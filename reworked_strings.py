@@ -35,6 +35,9 @@ def find_index(text, pattern):
     found_index = None
     current_index = 0
 
+    if pattern == '':
+        return 0
+
     for index, char in enumerate(text):
         if char == pattern[current_index]:
             if found_index == None:
@@ -43,7 +46,7 @@ def find_index(text, pattern):
             current_index += 1
 
             if current_index >= len(pattern):
-                return True
+                return found_index
         else:
             current_index = 0
             found_index = None
@@ -92,4 +95,6 @@ def main():
 # if __name__ == '__main__':
 #     main()
 
-print(contains('ababc', 'abc'))
+# print(contains('ababc', 'abc'))
+
+print(find_index('ababc', 'abc'))
