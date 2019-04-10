@@ -13,8 +13,8 @@ def is_palindrome(text):
     # implement is_palindrome_iterative and is_palindrome_recursive below, then
     # change this to call your implementation to verify it passes all tests
     assert isinstance(text, str), 'input is not a string: {}'.format(text)
-    # return is_palindrome_iterative(text)
-    return is_palindrome_recursive(text)
+    return is_palindrome_iterative(text)
+    # return is_palindrome_recursive(text)
 
 
 def is_palindrome_iterative(text):
@@ -34,22 +34,56 @@ def is_palindrome_iterative(text):
     if len(text) == 0 or len(text) == 1:
         return True
 
-    table = str.maketrans(dict.fromkeys(string.punctuation))
-
-    text = text.translate(table).replace(' ', '').lower()
-
-    left_index = 0
+    # table = str.maketrans(dict.fromkeys(string.punctuation))
+    #
+    # text = text.translate(table).replace(' ', '').lower()
+    #
+    # left_index = 0
+    # right_index = len(text) - 1
+    #
+    # while right_index >= left_index:
+    #     left_character = text[left_index]
+    #     right_character = text[right_index]
+    #
+    #     if left_character != right_character:
+    #         return False
+    #
+    #     left_index += 1
+    #     right_index -= 1
+    #
+    # return True
+git
     right_index = len(text) - 1
+    left_index = 0
+    left_character = text[left_index]
+    right_character = text[right_index]
 
-    while right_index >= left_index:
-        left_character = text[left_index]
-        right_character = text[right_index]
+    for i in range(len(text) // 2):
+        # Move the left index over right if the chacracter is not a letter
 
-        if left_character != right_character:
+        if left_character not in string.ascii_letters and right_character not in string.ascii_letters:
+            if left_index + 1 >= right_index:
+                return True
+
+        while left_character not in string.ascii_letters:
+            left_index += 1
+            left_character = text[left_index]
+
+        # Move the right index over left if the chacracter is not a letter
+        while right_character not in string.ascii_letters:
+            right_index -= 1
+            right_character = text[right_index]
+
+
+
+        if text[left_index].lower() != text[right_index].lower():
             return False
 
         left_index += 1
+        left_character = text[left_index]
+
         right_index -= 1
+        right_character = text[right_index]
 
     return True
 
@@ -101,3 +135,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+print(is_palindrome("No, On!"))
