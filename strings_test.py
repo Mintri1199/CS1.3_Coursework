@@ -79,7 +79,7 @@ class StringsTest(unittest.TestCase):
         # TODO: Write more test cases that check complex patterns or edge cases
         # You'll need a lot more than this to test your algorithm's robustness
         # ...
-
+    #
     # def test_find_all_indexes_with_matching_patterns(self):
     #     # Positive test cases (examples) with matching patterns
     #     assert find_all_indexes('abc', '') == [0, 1, 2]  # all strings contain empty string
@@ -117,7 +117,7 @@ class StringsTest(unittest.TestCase):
     #     assert find_all_indexes('abra cadabra', 'adab') == [6]  # overlapping prefix
     #     # TODO: Write more test cases that check complex patterns or edge cases
     #     # You'll need a lot more than this to test your algorithm's robustness
-    #     # ...
+        # ...
 
 
 if __name__ == '__main__':

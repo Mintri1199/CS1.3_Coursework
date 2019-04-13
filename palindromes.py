@@ -13,8 +13,8 @@ def is_palindrome(text):
     # implement is_palindrome_iterative and is_palindrome_recursive below, then
     # change this to call your implementation to verify it passes all tests
     assert isinstance(text, str), 'input is not a string: {}'.format(text)
-    # return is_palindrome_iterative(text)
-    return is_palindrome_recursive(text)
+    return is_palindrome_iterative(text)
+    # return is_palindrome_recursive(text)
 
 
 def is_palindrome_iterative(text):
@@ -34,7 +34,7 @@ def is_palindrome_iterative(text):
     if len(text) == 0 or len(text) == 1:
         return True
 
-    # table = str.maketrans(dict.fromkeys(string.punctuation))  O(n^2)
+    # table = str.maketrans(dict.fromkeys(string.punctuation))  O(p) time and space
     #
     # text = text.translate(table).replace(' ', '').lower()   O(n)  O(n)
     #
@@ -55,7 +55,7 @@ def is_palindrome_iterative(text):
     right_index = len(text) - 1  # O(1)
     left_index = 0  # O(1)
 
-    for i in range(len(text) // 2):  # O(n/2)
+    while left_index < right_index:  # n/2 ==
         # Move the left index over right if the character is not a letter
 
         if validation(text, left_index, right_index):  # O(1)
@@ -122,7 +122,10 @@ def is_palindrome_recursive(text, left=None, right=None):
             return True
 
     if right >= left:
-        if text[left].lower() == text[right].lower():
+        if text[left] == text[right]:
+            return is_palindrome_recursive(text, left + 1, right - 1)
+
+        elif text[left].lower() == text[right].lower():
             return is_palindrome_recursive(text, left + 1, right - 1)
 
         else:

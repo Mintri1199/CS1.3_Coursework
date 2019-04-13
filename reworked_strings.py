@@ -26,7 +26,7 @@ def contains(text, pattern):
     return False
 
 
-def find_index(text, pattern):
+def find_index(text, pattern, offset=0):
     """Return the starting index of the first occurrence of pattern in text,
     or None if not found."""
     assert isinstance(text, str), 'text is not a string: {}'.format(text)
@@ -54,6 +54,23 @@ def find_index(text, pattern):
                 found_index = index
                 current_index += 1
 
+    # for text_index in range(len(text)):
+    #     if text[text_index + offset] == pattern[current_index]:
+    #         if found_index == None:
+    #             found_index = text_index + offset
+    #
+    #         current_index += 1
+    #
+    #         if current_index >= len(pattern):
+    #             return found_index
+    #     else:
+    #         current_index = 0
+    #         found_index = None
+    #         if text[text_index + offset] == pattern[current_index]:
+    #             found_index = text_index + offset
+    #             current_index += 1
+
+
 
 def find_all_indexes(text, pattern):
     """Return a list of starting indexes of all occurrences of pattern in text,
@@ -61,6 +78,40 @@ def find_all_indexes(text, pattern):
     assert isinstance(text, str), 'text is not a string: {}'.format(text)
     assert isinstance(pattern, str), 'pattern is not a string: {}'.format(text)
     # TODO: Implement find_all_indexes here (iteratively and/or recursively)
+
+    found_index = None
+    current_index = 0
+    array_of_found = []
+    if pattern == '':
+        for i in range(len(text)):
+            array_of_found.append(i)
+
+        return array_of_found
+
+    for index, char in enumerate(text):
+        if char == pattern[current_index]:
+            if found_index == None:
+                found_index = index
+
+            if len(pattern) != 1:
+                current_index += 1
+
+            if current_index >= len(pattern) - 1:
+                array_of_found.append(found_index)
+                found_index = None
+                current_index = 0
+
+                if char == pattern[current_index]:
+                    found_index = index
+                    current_index += 1
+        else:
+            current_index = 0
+            found_index = None
+            if char == pattern[current_index]:
+                found_index = index
+                current_index += 1
+
+    return array_of_found
 
 
 def test_string_algorithms(text, pattern):
@@ -97,4 +148,4 @@ def main():
 
 # print(contains('ababc', 'abc'))
 
-print(find_index('ababc', 'abc'))
+print(find_index('a c', 'c'))
