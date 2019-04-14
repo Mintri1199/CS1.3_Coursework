@@ -4,6 +4,7 @@ class Node(object):
         """Initialize this node with the given data."""
         self.data = data
         self.next = None
+        self.previous = None
 
     def __repr__(self):
         """Return a string representation of this node."""
@@ -53,8 +54,7 @@ class LinkedList(object):
         return self.head is None
 
     def length(self):
-        """Return the length of this linked list by traversing its nodes.
-        Best and worst case running time: ??? under what conditions? [TODO]"""
+        """Return the size of the linked list"""
         return self.size  # O(1)
 
     def get_at_index(self, index):
@@ -62,6 +62,8 @@ class LinkedList(object):
         raise ValueError if the given index is out of range of the list size.
         Best case running time: ??? under what conditions? [TODO]
         Worst case running time: ??? under what conditions? [TODO]"""
+        """Maybe I can implement this in a different way"""
+
         # Check if the given index is out of range and if so raise an error
         if not (0 <= index < self.size):
             raise ValueError('List index out of range: {}'.format(index))
@@ -89,8 +91,7 @@ class LinkedList(object):
     def insert_at_index(self, index, item):
         """Insert the given item at the given index in this linked list, or
         raise ValueError if the given index is out of range of the list size.
-        Best case running time: ??? under what conditions? [TODO]
-        Worst case running time: ??? under what conditions? [TODO]"""
+        """
         # Check if the given index is out of range and if so raise an error
         if not (0 <= index <= self.size):
             raise ValueError('List index out of range: {}'.format(index))
@@ -118,8 +119,10 @@ class LinkedList(object):
             counter += 1
 
         new_node = Node(item)  # O(1) Instantiate a new node
+        new_node.previous = previous_node
         previous_node.next = new_node  # O(1) Change the next pointer of the previous node to the new node
         new_node.next = current_node  # O(1) assign the new node next pointer to the current node
+        current_node.previous = new_node
         self.size += 1
 
     def append(self, item):
@@ -133,8 +136,9 @@ class LinkedList(object):
             # Assign head to new node
             self.head = new_node  # O(1)
         else:
-            # Otherwise insert new node after tail
+            # Otherwise insert new node after tail while also assign the previous pointer
             self.tail.next = new_node  # O(1)
+            new_node.previous = self.tail
         # Update tail to new node regardless
         self.tail = new_node  # O(1)
         # Increment the size by 1
@@ -151,8 +155,9 @@ class LinkedList(object):
             # Assign tail to new node
             self.tail = new_node  # O(1)
         else:
-            # Otherwise insert new node before head
+            # Otherwise insert new node before head while also assign the previous pointer
             new_node.next = self.head  # O(1)
+            self.head.previous = new_node
         # Update head to new node regardless
         self.head = new_node  # O(1)
         # Increment the size by 1
@@ -237,22 +242,29 @@ class LinkedList(object):
             # Check if we found a node in the middle of this linked list
             if node is not self.head and node is not self.tail:
                 # Update the previous node to skip around the found node
-                previous.next = node.next
+                next_node = node.next
+                previous.next = next_node
+                next_node.previous = previous
                 # Unlink the found node from its next node
                 node.next = None
             # Check if we found a node at the head
             if node is self.head:
                 # Update head to the next node
-                self.head = node.next
                 # Unlink the found node from the next node
+                self.head = node.next
+                if node.next is not None:
+                    self.head.previous = None
                 node.next = None
+
             # Check if we found a node at the tail
             if node is self.tail:
                 # Check if there is a node before the found node
                 if previous is not None:
                     # Unlink the previous node from the found node
+
                     previous.next = None
                 # Update tail to the previous node regardless
+                node.previous = None
                 self.tail = previous
 
             self.size -= 1
@@ -261,39 +273,47 @@ class LinkedList(object):
             raise ValueError('Item not found: {}'.format(item))
 
 
-def test_linked_list():
+def test_doubly_linked_list():
     ll = LinkedList()
     print(ll)
 
     print('Appending items:')
     ll.append('A')
     print(ll)
+    print(ll.head.next)
+    print(ll.head.previous)
     ll.append('B')
     print(ll)
+    print(ll.tail.next)
+    print(ll.tail.previous)
     ll.append('C')
     print(ll)
-    print('head: {}'.format(ll.head))
-    print('tail: {}'.format(ll.tail))
-    print('size: {}'.format(ll.size))
-    print('length: {}'.format(ll.length()))
+    print(ll.tail.next)
+    print(ll.tail.previous)
+    # print(ll)
+    # print('head: {}'.format(ll.head))
+    # print('tail: {}'.format(ll.tail))
+    # print('size: {}'.format(ll.size))
+    # print('length: {}'.format(ll.length()))
 
-    print('Getting items by index:')
-    for index in range(ll.size):
-        item = ll.get_at_index(index)
-        print('get_at_index({}): {!r}'.format(index, item))
-
-    print('Deleting items:')
-    ll.delete('B')
-    print(ll)
-    ll.delete('C')
-    print(ll)
-    ll.delete('A')
-    print(ll)
-    print('head: {}'.format(ll.head))
-    print('tail: {}'.format(ll.tail))
-    print('size: {}'.format(ll.size))
-    print('length: {}'.format(ll.length()))
+    # print('Getting items by index:')
+    # for index in range(ll.size):
+    #     item = ll.get_at_index(index)
+    #     print('get_at_index({}): {!r}'.format(index, item))
+    #
+    # print('Deleting items:')
+    # ll.delete('B')
+    # print(ll)
+    # ll.delete('C')
+    # print(ll)
+    # ll.delete('A')
+    # print(ll)
+    # print('head: {}'.format(ll.head))
+    # print('tail: {}'.format(ll.tail))
+    # print('size: {}'.format(ll.size))
+    # print('length: {}'.format(ll.length()))
 
 
 if __name__ == '__main__':
-    test_linked_list()
+    test_doubly_linked_list()
+
