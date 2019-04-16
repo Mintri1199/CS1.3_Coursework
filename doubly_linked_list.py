@@ -28,7 +28,7 @@ class ListIterator(object):
         return result
 
 
-class LinkedList(object):
+class DoublyLinkedList(object):
 
     def __init__(self, iterable=None):
         """Initialize this linked list and append the given items, if any."""
@@ -345,7 +345,7 @@ def test_doubly_linked_list():
 
 
 def test_iterator():
-    ll = LinkedList(['A', 'B', 'C'])
+    ll = DoublyLinkedList(['A', 'B', 'C'])
 
     for i in ll:
         print(i)
