@@ -11,6 +11,23 @@ class Node(object):
         return 'Node({!r})'.format(self.data)
 
 
+class ListIterator(object):
+    def __init__(self, node):
+        self.current = node
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current.next is None:
+            raise StopIteration()
+
+        result = self.current.data
+        self.current = self.current.next
+
+        return result
+
+
 class LinkedList(object):
 
     def __init__(self, iterable=None):
@@ -31,6 +48,20 @@ class LinkedList(object):
     def __repr__(self):
         """Return a string representation of this linked list."""
         return 'LinkedList({!r})'.format(self.items())
+
+    def __iter__(self):
+        node = self.head
+
+        while node:
+            yield node.data
+            node = node.next
+
+    def __reversed__(self):
+        node = self.tail
+
+        while node:
+            yield node.data
+            node = node.previous
 
     def items(self):
         """Return a list of all items in this linked list.
@@ -261,7 +292,6 @@ class LinkedList(object):
                 # Check if there is a node before the found node
                 if previous is not None:
                     # Unlink the previous node from the found node
-
                     previous.next = None
                 # Update tail to the previous node regardless
                 node.previous = None
@@ -290,30 +320,40 @@ def test_doubly_linked_list():
     print(ll)
     print(ll.tail.next)
     print(ll.tail.previous)
-    # print(ll)
-    # print('head: {}'.format(ll.head))
-    # print('tail: {}'.format(ll.tail))
-    # print('size: {}'.format(ll.size))
-    # print('length: {}'.format(ll.length()))
+    print(ll)
+    print('head: {}'.format(ll.head))
+    print('tail: {}'.format(ll.tail))
+    print('size: {}'.format(ll.size))
+    print('length: {}'.format(ll.length()))
 
-    # print('Getting items by index:')
-    # for index in range(ll.size):
-    #     item = ll.get_at_index(index)
-    #     print('get_at_index({}): {!r}'.format(index, item))
-    #
-    # print('Deleting items:')
-    # ll.delete('B')
-    # print(ll)
-    # ll.delete('C')
-    # print(ll)
-    # ll.delete('A')
-    # print(ll)
-    # print('head: {}'.format(ll.head))
-    # print('tail: {}'.format(ll.tail))
-    # print('size: {}'.format(ll.size))
-    # print('length: {}'.format(ll.length()))
+    print('Getting items by index:')
+    for index in range(ll.size):
+        item = ll.get_at_index(index)
+        print('get_at_index({}): {!r}'.format(index, item))
+
+    print('Deleting items:')
+    ll.delete('B')
+    print(ll)
+    ll.delete('C')
+    print(ll)
+    ll.delete('A')
+    print(ll)
+    print('head: {}'.format(ll.head))
+    print('tail: {}'.format(ll.tail))
+    print('size: {}'.format(ll.size))
+    print('length: {}'.format(ll.length()))
+
+
+def test_iterator():
+    ll = LinkedList(['A', 'B', 'C'])
+
+    for i in ll:
+        print(i)
+
+    for i in reversed(ll):
+        print(i)
 
 
 if __name__ == '__main__':
-    test_doubly_linked_list()
+    test_iterator()
 

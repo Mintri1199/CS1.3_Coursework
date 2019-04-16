@@ -31,6 +31,13 @@ class LinkedList(object):
         """Return a string representation of this linked list."""
         return 'LinkedList({!r})'.format(self.items())
 
+    def __iter__(self):
+        node = self.head
+
+        while node:
+            yield node.data
+            node = node.next
+
     def items(self):
         """Return a list of all items in this linked list.
         Best and worst case running time: Theta(n) for n items in the list
@@ -96,7 +103,7 @@ class LinkedList(object):
             raise ValueError('List index out of range: {}'.format(index))
         # TODO: Find the node before the given index and insert item after it
 
-        # Best Case: O(1) if index is 0 so the program will call prepend
+        # Best Case: O(1) if index is 0 or equal to the size of the linked list
         # Worse Case: O(n) if the index is the last index of the linked list
 
         if index == 0:  # If the user want to prepend
@@ -107,19 +114,24 @@ class LinkedList(object):
             self.append(item)
             return
 
-        previous_node = None
+        # previous_node = None
         current_node = self.head
 
-        counter = 0
-
-        while counter != index:  # O(n) keep iterating until the counter match the index
-            previous_node = current_node  # O(1) reassign the previous node to the current node
-            current_node = current_node.next  # O(1) reassign the current node to the next node
-            counter += 1
+        # counter = 0
+        #
+        # while counter != index:  # O(n) keep iterating until the counter match the index
+        #     previous_node = current_node  # O(1) reassign the previous node to the current node
+        #     current_node = current_node.next  # O(1) reassign the current node to the next node
+        #     counter += 1
+        #
+        for _ in range(index - 1):  # O(index - 1)
+            current_node = current_node.next
 
         new_node = Node(item)  # O(1) Instantiate a new node
-        previous_node.next = new_node  # O(1) Change the next pointer of the previous node to the new node
-        new_node.next = current_node  # O(1) assign the new node next pointer to the current node
+        # previous_node.next = new_node  # O(1) Change the next pointer of the previous node to the new node
+        # new_node.next = current_node  # O(1) assign the new node next pointer to the current node
+        new_node.next = current_node.next  # O(1) Assign next pointer of new node to node that current.node,next point to
+        current_node.next = new_node  # O(1) Instantiate a new node
         self.size += 1
 
     def append(self, item):
@@ -177,17 +189,12 @@ class LinkedList(object):
         return None  # Constant time to return None
 
     def replace(self, old_item, new_item):
-        """Replace the given old_item in this linked list with given new_item
-        using the same node, or raise ValueError if old_item is not found.
-        Best case running time: ??? under what conditions? [TODO]
-        Worst case running time: ??? under what conditions? [TODO]"""
-        # TODO: Find the node containing the given old_item and replace its
         # data with new_item, without creating a new node object
 
         # Best case running time: O(1) if the targeted node is at the head or the tail
-        # Worse case running time: O(n) if the targeted node is the second last node
+        # Worse case running time: O(n - 2) if the targeted node is the second last node
 
-        if self.head.data == old_item:
+        if self.head.data == old_item:  #
             self.head.data = new_item
             return
 
@@ -195,17 +202,26 @@ class LinkedList(object):
             self.tail.data = new_item
             return
 
-        node = self.head
+        else:
+            node = self.head.next
 
-        while node is not None:
-            if node.data == old_item:
-                node.data = new_item
-                return
+            while node is not self.tail:
+                if node.data == old_item:
+                    node.data = new_item
+                    return
 
-            else:
-                node = node.next
+                else:
+                    node = node.next
 
-        raise ValueError('old item is not found')
+            # for _ in range(1, self.size - 1):
+            #     if node.data == old_item:
+            #         node.data = new_item
+            #         return
+            #     else:
+            #         node = node.next
+
+
+        raise ValueError('old item is not found: {}'.format(old_item))
 
     def delete(self, item):
         """Delete the given item from this linked list, or raise ValueError.
