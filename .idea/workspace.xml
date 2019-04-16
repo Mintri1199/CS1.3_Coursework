@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9672c880-565f-4ea1-9b25-fd977d7036e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/stack.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,24 +26,24 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="py" value="44" />
+          <entry key="py" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Git file" value="1" />
-          <entry key="Python" value="44" />
+          <entry key="Python" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="191" />
-          <entry key="py" value="20303" />
+          <entry key="py" value="20553" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="20494" />
+          <entry key="Python" value="20744" />
         </counts>
       </usages-collector>
     </session>
@@ -54,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reworked_strings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1035">
+            <state relative-caret-position="-788">
               <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
               <folding>
                 <element signature="e#1840#1877#0" />
@@ -63,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linkedlist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-719">
-              <caret line="194" column="88" selection-start-line="194" selection-start-column="88" selection-end-line="194" selection-end-column="88" />
+            <state relative-caret-position="1370">
+              <caret line="313" selection-start-line="313" selection-end-line="313" />
               <folding>
                 <element signature="e#4557#4570#0" />
                 <marker date="1555364516579" expanded="true" signature="1172:1178" ph="..." />
@@ -79,29 +78,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="48" column="49" lean-forward="true" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+            <state relative-caret-position="522">
+              <caret line="92" column="22" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/queue.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.2/python_stubs/1112076861/builtins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="959">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/queue_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="406">
+              <caret line="3662" column="8" selection-start-line="3662" selection-start-column="8" selection-end-line="3662" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -121,12 +108,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/doubly_linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4585">
-              <caret line="345" selection-start-line="345" selection-end-line="345" />
+            <state relative-caret-position="415">
+              <caret line="347" column="25" selection-start-line="347" selection-start-column="25" selection-end-line="347" selection-end-column="25" />
               <folding>
-                <marker date="1555228301494" expanded="true" signature="345:648" ph="..." />
-                <marker date="1555228301494" expanded="true" signature="1560:1673" ph="..." />
-                <marker date="1555228301494" expanded="true" signature="12851:12971" ph="..." />
+                <marker date="1555392531743" expanded="true" signature="345:648" ph="..." />
+                <marker date="1555392531743" expanded="true" signature="1566:1679" ph="..." />
+                <marker date="1555392531743" expanded="true" signature="12857:12983" ph="..." />
               </folding>
             </state>
           </provider>
@@ -184,9 +171,9 @@
         <option value="$PROJECT_DIR$/linkedlist_test.py" />
         <option value="$PROJECT_DIR$/doubly_linked_list_teset.py" />
         <option value="$PROJECT_DIR$/doubly_linked_list_test.py" />
-        <option value="$PROJECT_DIR$/doubly_linked_list.py" />
         <option value="$PROJECT_DIR$/linkedlist.py" />
         <option value="$PROJECT_DIR$/stack_test.py" />
+        <option value="$PROJECT_DIR$/doubly_linked_list.py" />
         <option value="$PROJECT_DIR$/queue.py" />
         <option value="$PROJECT_DIR$/queue_test.py" />
         <option value="$PROJECT_DIR$/stack.py" />
@@ -303,7 +290,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for doubly_linked_list_test.LinkedListTest.test_items" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in course_works" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="course_works" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -313,8 +300,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;doubly_linked_list_test.LinkedListTest.test_items&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests in doubly_linked_list_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -332,19 +319,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for doubly_linked_list_test.LinkedListTest.test_items" />
       <item itemvalue="Python tests.Unittests for doubly_linked_list_test.LinkedListTest.test_init_with_list" />
       <item itemvalue="Python tests.Unittests in doubly_linked_list_test.py" />
       <item itemvalue="Python.doubly_linked_list" />
       <item itemvalue="Python.stack" />
+      <item itemvalue="Python tests.Unittests in course_works" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.stack" />
+        <item itemvalue="Python tests.Unittests in course_works" />
         <item itemvalue="Python.doubly_linked_list" />
         <item itemvalue="Python tests.Unittests in doubly_linked_list_test.py" />
         <item itemvalue="Python tests.Unittests for doubly_linked_list_test.LinkedListTest.test_init_with_list" />
-        <item itemvalue="Python tests.Unittests for doubly_linked_list_test.LinkedListTest.test_items" />
       </list>
     </recent_temporary>
   </component>
@@ -362,12 +349,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_strings_test_StringsTest_test_contains_with_complex_patterns - 2019.04.10 at 11h 40m 46s.xml">
-      <configuration name="Unittests for strings_test.StringsTest.test_contains_with_complex_patterns" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_strings_test_StringsTest - 2019.04.10 at 11h 40m 50s.xml">
-      <configuration name="Unittests for strings_test.StringsTest" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_strings_test_StringsTest_test_find_index_with_complex_patterns - 2019.04.10 at 11h 41m 31s.xml">
       <configuration name="Unittests for strings_test.StringsTest.test_find_index_with_complex_patterns" configurationId="tests" />
     </history-entry>
@@ -392,6 +373,12 @@
     <history-entry file="Unittests_in_doubly_linked_list_test_py - 2019.04.14 at 00h 06m 07s.xml">
       <configuration name="Unittests in doubly_linked_list_test.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_course_works - 2019.04.15 at 22h 30m 17s.xml">
+      <configuration name="Unittests in course_works" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_course_works - 2019.04.15 at 22h 30m 22s.xml">
+      <configuration name="Unittests in course_works" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,6 +391,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11585045" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -411,12 +399,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.0" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3387534" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.47696477" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32971996" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32949087" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" x="10" y="77" width="1899" height="1025" id="Terminal" order="8" weight="0.14543812" />
+      <window_info active="true" anchor="bottom" x="10" y="77" width="1899" height="1025" id="Terminal" order="8" visible="true" weight="0.3089431" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32874015" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -466,13 +454,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/stack.py</url>
-          <line>97</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/linkedlist.py</url>
-          <line>225</line>
-          <option name="timeStamp" value="34" />
+          <line>41</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -555,35 +538,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/doubly_linked_list_teset.py" />
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.2/python_stubs/1112076861/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="815" column="8" selection-start-line="815" selection-start-column="8" selection-end-line="815" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reworked_strings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1035">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-          <folding>
-            <element signature="e#1840#1877#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doubly_linked_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4585">
-          <caret line="345" selection-start-line="345" selection-end-line="345" />
-          <folding>
-            <marker date="1555228301494" expanded="true" signature="345:648" ph="..." />
-            <marker date="1555228301494" expanded="true" signature="1560:1673" ph="..." />
-            <marker date="1555228301494" expanded="true" signature="12851:12971" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stack_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1750">
@@ -614,38 +568,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/doubly_linked_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="347" column="25" selection-start-line="347" selection-start-column="25" selection-end-line="347" selection-end-column="25" />
+          <folding>
+            <marker date="1555392531743" expanded="true" signature="345:648" ph="..." />
+            <marker date="1555392531743" expanded="true" signature="1566:1679" ph="..." />
+            <marker date="1555392531743" expanded="true" signature="12857:12983" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/queue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="959">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="75">
+          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/queue_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        <state relative-caret-position="234">
+          <caret line="13" column="36" lean-forward="true" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reworked_strings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-788">
+          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#1840#1877#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linkedlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1370">
+          <caret line="313" selection-start-line="313" selection-end-line="313" />
+          <folding>
+            <element signature="e#4557#4570#0" />
+            <marker date="1555364516579" expanded="true" signature="1172:1178" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="48" column="49" lean-forward="true" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
+        <state relative-caret-position="522">
+          <caret line="92" column="22" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/linkedlist.py">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.2/python_stubs/1112076861/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-719">
-          <caret line="194" column="88" selection-start-line="194" selection-start-column="88" selection-end-line="194" selection-end-column="88" />
-          <folding>
-            <element signature="e#4557#4570#0" />
-            <marker date="1555364516579" expanded="true" signature="1172:1178" ph="..." />
-          </folding>
+        <state relative-caret-position="406">
+          <caret line="3662" column="8" selection-start-line="3662" selection-start-column="8" selection-end-line="3662" selection-end-column="8" />
         </state>
       </provider>
     </entry>
