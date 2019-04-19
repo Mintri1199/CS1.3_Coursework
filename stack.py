@@ -28,7 +28,7 @@ class LinkedStack(object):
     def push(self, item):
         """Insert the given item on the top of this stack.
         Running time: O(1) – Because we are appending the new item to the end of the linked list"""
-        self.list.append(item)
+        self.list.prepend(item)
 
     def peek(self):
         """Return the item on the top of this stack without removing it,
@@ -37,18 +37,18 @@ class LinkedStack(object):
         if self.is_empty():
             return None
         else:
-            return self.list.tail.data
+            return self.list.head.data
 
     def pop(self):
         """Remove and return the item on the top of this stack,
         or raise ValueError if this stack is empty.
-        Running time: O(n) – the program will traverse through the linked list to get to the end """
+        Running time: O(1) – Since the targeted node is the head of the linked list"""
         if self.is_empty():
             raise ValueError('Stack is empty')
         else:
-            last_value = self.list.tail.data
-            self.list.delete(last_value)
-            return last_value
+            top_value = self.list.head.data
+            self.list.delete(top_value)
+            return top_value
 
 # Implement ArrayStack below, then change the assignment at the bottom
 # to use this Stack implementation to verify it passes all tests
@@ -78,7 +78,7 @@ class ArrayStack(object):
 
     def push(self, item):
         """Insert the given item on the top of this stack.
-        Running time: O(1) because we can reference the last index to insert the item after it"""
+        Running time: Amortize O(1) || O(n) """
         self.list.append(item)
 
     def peek(self):
@@ -96,9 +96,7 @@ class ArrayStack(object):
         if self.is_empty():
             raise ValueError('Stack is empty')
         else:
-            last_value = self.list[-1]
-            del self.list[-1]
-            return last_value
+            return self.list.pop(-1)
 
 
 # Implement LinkedStack and ArrayStack above, then change the assignment below

@@ -304,7 +304,7 @@ class DoublyLinkedList(object):
 
 
 def test_doubly_linked_list():
-    ll = LinkedList()
+    ll = DoublyLinkedList()
     print(ll)
 
     print('Appending items:')
