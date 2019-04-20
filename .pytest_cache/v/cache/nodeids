@@ -1,8 +1,11 @@
 [
-  "queue_tests.py::QueueTest::test_dequeue",
-  "queue_tests.py::QueueTest::test_enqueue",
-  "queue_tests.py::QueueTest::test_front",
-  "queue_tests.py::QueueTest::test_init",
-  "queue_tests.py::QueueTest::test_init_with_list",
-  "queue_tests.py::QueueTest::test_length"
+  "double_ended_queue_test.py::DequeTest::test_append",
+  "double_ended_queue_test.py::DequeTest::test_init",
+  "double_ended_queue_test.py::DequeTest::test_init_with_list",
+  "double_ended_queue_test.py::DequeTest::test_length",
+  "double_ended_queue_test.py::DequeTest::test_peek_first",
+  "double_ended_queue_test.py::DequeTest::test_peek_last",
+  "double_ended_queue_test.py::DequeTest::test_pop_first",
+  "double_ended_queue_test.py::DequeTest::test_pop_last",
+  "double_ended_queue_test.py::DequeTest::test_prepend"
 ]
