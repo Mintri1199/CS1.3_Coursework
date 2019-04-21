@@ -1,11 +1,13 @@
 [
-  "double_ended_queue_test.py::DequeTest::test_append",
-  "double_ended_queue_test.py::DequeTest::test_init",
-  "double_ended_queue_test.py::DequeTest::test_init_with_list",
-  "double_ended_queue_test.py::DequeTest::test_length",
-  "double_ended_queue_test.py::DequeTest::test_peek_first",
-  "double_ended_queue_test.py::DequeTest::test_peek_last",
-  "double_ended_queue_test.py::DequeTest::test_pop_first",
-  "double_ended_queue_test.py::DequeTest::test_pop_last",
-  "double_ended_queue_test.py::DequeTest::test_prepend"
+  "hash_table_test.py::HashTableTest::test_contains",
+  "hash_table_test.py::HashTableTest::test_delete",
+  "hash_table_test.py::HashTableTest::test_init",
+  "hash_table_test.py::HashTableTest::test_items",
+  "hash_table_test.py::HashTableTest::test_keys",
+  "hash_table_test.py::HashTableTest::test_length",
+  "hash_table_test.py::HashTableTest::test_resize",
+  "hash_table_test.py::HashTableTest::test_set_and_get",
+  "hash_table_test.py::HashTableTest::test_set_twice_and_get",
+  "hash_table_test.py::HashTableTest::test_size",
+  "hash_table_test.py::HashTableTest::test_values"
 ]

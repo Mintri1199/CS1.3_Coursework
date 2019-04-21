@@ -1,4 +1,4 @@
-from hashtable import HashTable
+from hash_table import HashTable
 import unittest
 # Python 2 and 3 compatibility: unittest module renamed this assertion method
 if not hasattr(unittest.TestCase, 'assertCountEqual'):
