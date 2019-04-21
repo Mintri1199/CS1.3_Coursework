@@ -1,5 +1,1 @@
-{
-  "strings_test.py": true,
-  "strings_test.py::StringsTest::test_find_all_indexes_with_matching_patterns": true,
-  "strings_test.py::StringsTest::test_find_all_indexes_with_non_matching_patterns": true
-}
+{}

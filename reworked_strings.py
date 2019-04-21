@@ -38,26 +38,10 @@ def find_index(text, pattern, offset=0):
     if pattern == '':
         return 0
 
-    for index, char in enumerate(text):
-        if char == pattern[current_index]:
-            if found_index == None:
-                found_index = index
-
-            current_index += 1
-
-            if current_index >= len(pattern):
-                return found_index
-        else:
-            current_index = 0
-            found_index = None
-            if char == pattern[current_index]:
-                found_index = index
-                current_index += 1
-
-    # for text_index in range(len(text)):
-    #     if text[text_index + offset] == pattern[current_index]:
+    # for index, char in enumerate(text):
+    #     if char == pattern[current_index]:
     #         if found_index == None:
-    #             found_index = text_index + offset
+    #             found_index = index
     #
     #         current_index += 1
     #
@@ -66,9 +50,28 @@ def find_index(text, pattern, offset=0):
     #     else:
     #         current_index = 0
     #         found_index = None
-    #         if text[text_index + offset] == pattern[current_index]:
-    #             found_index = text_index + offset
+    #         if char == pattern[current_index]:
+    #             found_index = index
     #             current_index += 1
+
+    # TODO: Come back to this and make the file more DRY
+    for text_index in range(len(text) - offset):
+        if text[text_index + offset] == pattern[current_index]:
+            if found_index is None:
+                found_index = text_index + offset
+
+            current_index += 1
+
+            if current_index >= len(pattern):
+                return found_index
+        else:
+            current_index = 0
+            found_index = None
+            if text[text_index + offset] == pattern[current_index]:
+                found_index = text_index + offset
+                current_index += 1
+
+    return None
 
 
 def find_all_indexes(text, pattern):
@@ -76,10 +79,6 @@ def find_all_indexes(text, pattern):
     or an empty list if not found."""
     assert isinstance(text, str), 'text is not a string: {}'.format(text)
     assert isinstance(pattern, str), 'pattern is not a string: {}'.format(text)
-    # TODO: Implement find_all_indexes here (iteratively and/or recursively)
-
-    found_index = None
-    current_index = 0
     array_of_found = []
     if pattern == '':
         for i in range(len(text)):
@@ -87,28 +86,50 @@ def find_all_indexes(text, pattern):
 
         return array_of_found
 
-    for index, char in enumerate(text):
-        if char == pattern[current_index]:
-            if found_index == None:
-                found_index = index
+    # for index, char in enumerate(text):
+    #     if char == pattern[current_index]:
+    #         if found_index == None:
+    #             found_index = index
+    #
+    #         if len(pattern) != 1:
+    #             current_index += 1
+    #
+    #         if current_index >= len(pattern) - 1:
+    #             array_of_found.append(found_index)
+    #             found_index = None
+    #             current_index = 0
+    #
+    #             if char == pattern[current_index]:
+    #                 found_index = index
+    #                 current_index += 1
+    #     else:
+    #         current_index = 0
+    #         found_index = None
+    #         if char == pattern[current_index]:
+    #             found_index = index
+    #             current_index += 1
+    limit_range = range(len(text) - (len(pattern) - 1))
+    #
+    for i in limit_range:
+        char = text[i]
+        if char == pattern[0]:
+            for patt_index in range(len(pattern)):
+                char = text[i + patt_index]
+                pattern_char = pattern[patt_index]
 
-            if len(pattern) != 1:
-                current_index += 1
+                if char == pattern_char:
+                    if patt_index == len(pattern) - 1:
+                        array_of_found.append(i)
+                    else:
+                        continue
+                else:  # It is not a pattern
+                    break
 
-            if current_index >= len(pattern) - 1:
-                array_of_found.append(found_index)
-                found_index = None
-                current_index = 0
-
-                if char == pattern[current_index]:
-                    found_index = index
-                    current_index += 1
-        else:
-            current_index = 0
-            found_index = None
-            if char == pattern[current_index]:
-                found_index = index
-                current_index += 1
+    # offset = len(pattern) - 1
+    # for i in limit_range:
+    #     found = find_index(text, pattern, i)
+    #     if found is not None:
+    #         array_of_found.append(found)
 
     return array_of_found
 
@@ -141,10 +162,12 @@ def main():
         print("find_index('abra cadabra', 'abra') => 0")
         print("find_all_indexes('abra cadabra', 'abra') => [0, 8]")
 
+
 #
 # if __name__ == '__main__':
 #     main()
 
 # print(contains('ababc', 'abc'))
 
-print(find_index('a c', 'c'))
+
+print(find_all_indexes('ababc', 'abc'))
