@@ -164,10 +164,10 @@ def main():
 
 
 #
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()
 
 # print(contains('ababc', 'abc'))
-
-
-print(find_all_indexes('ababc', 'abc'))
+#
+#
+# print(find_all_indexes('ababc', 'abc'))

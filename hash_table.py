@@ -54,7 +54,8 @@ class HashTable(object):
         # Collect all pairs of key-value entries in each of the buckets
         all_items = []
         for bucket in self.buckets:
-            all_items.extend(bucket.items())
+            all_items += bucket.items()
+            # all_items.extend(bucket.items())
         return all_items
 
     def length(self):
@@ -126,11 +127,12 @@ class HashTable(object):
     def delete(self, key):
         """Delete the given key and its associated value, or raise KeyError.
         Best case running time: O(1) if the targeted node is the head of the bucket (linked list)
-        Worst case running time: O(L) where L is the number of node in the linked list (bucket) if the targeted node is
+        Worst case running time: O(L) where L is the number of nodes in the linked list (bucket) if the targeted node is
                                  the last node"""
         # Find the bucket the given key belongs in
         index = self._bucket_index(key)
         bucket = self.buckets[index]
+
         # Find the entry with the given key in that bucket, if one exists
         entry = bucket.find(lambda key_value: key_value[0] == key)
         if entry is not None:  # Found
@@ -144,7 +146,7 @@ class HashTable(object):
         """Resize this hash table's buckets and rehash all key-value entries.
         Should be called automatically when load factor exceeds a threshold
         such as 0.75 after an insertion (when set is called with a new key).
-        Best and worst case running time: O(n) n is the number of items in the hash table
+        Best and worst case running time: O(n+b) -> O(b)
         Best and worst case space usage: O(n) n is the number of items in the hash table"""
         # If unspecified, choose new size dynamically based on current size
         if new_size is None:
@@ -155,8 +157,13 @@ class HashTable(object):
         # Get a list to temporarily hold all current key-value entries
         key_value_list = self.items()
         # Create a new list of new_size total empty linked list buckets
-        self.buckets = [LinkedList() for i in range(new_size)]
-        self.size = 0  # Reseting the size
+
+        # self.buckets = [LinkedList() for _ in range(new_size)]
+        #
+        # self.size = 0  # Resetting the size
+
+        # Re-initialize the array of buckets and resetting the size
+        self.__init__(new_size)  # O(2b) -> O(b)
 
         # Insert each key-value entry into the new list of buckets,
         for item in key_value_list:

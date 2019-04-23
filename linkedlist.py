@@ -220,7 +220,6 @@ class LinkedList(object):
             #     else:
             #         node = node.next
 
-
         raise ValueError('old item is not found: {}'.format(old_item))
 
     def delete(self, item):
