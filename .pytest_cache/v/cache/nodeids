@@ -1,13 +1,4 @@
 [
-  "hash_table_test.py::HashTableTest::test_contains",
-  "hash_table_test.py::HashTableTest::test_delete",
-  "hash_table_test.py::HashTableTest::test_init",
-  "hash_table_test.py::HashTableTest::test_items",
-  "hash_table_test.py::HashTableTest::test_keys",
-  "hash_table_test.py::HashTableTest::test_length",
-  "hash_table_test.py::HashTableTest::test_resize",
-  "hash_table_test.py::HashTableTest::test_set_and_get",
-  "hash_table_test.py::HashTableTest::test_set_twice_and_get",
-  "hash_table_test.py::HashTableTest::test_size",
-  "hash_table_test.py::HashTableTest::test_values"
+  "sets_test.py::SetTests::test_init",
+  "sets_test.py::SetTests::test_init_with_list"
 ]

@@ -1,1 +1,4 @@
-{}
+{
+  "sets_test.py::SetTests::test_init": true,
+  "sets_test.py::SetTests::test_init_with_list": true
+}
