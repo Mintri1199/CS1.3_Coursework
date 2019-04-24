@@ -57,12 +57,9 @@ class Set:
         return union_set
 
     def intersection(self, other_set):
-        """Assuming the input is a Set object, use iterable to make union easier
+        """Assuming the input is a Set object, use iterable to make intersection easier
             Return a new set that only contains the common elements between two sets"""
         intersection_set = Set()  # Initialize a new empty set
-
-        bigger_set = None
-        smaller_set = None
 
         # Determining which sets is bigger
         if other_set.size() >= self.size():
@@ -78,4 +75,21 @@ class Set:
                 intersection_set.add(item)
 
         return intersection_set
+
+    def difference(self, other_set):
+        """Assuming the input is a Set object, use iterable to make difference easier
+            Return a new set that only contains the common elements between two sets
+            TODO: How can I improve this? """
+        difference_set = Set()  # Initialize a new empty set
+
+        # Formula: union - intersection = difference
+        union_set = self.union(other_set)
+        inter_set = self.intersection(other_set)
+
+        # This is not efficient
+        for element in union_set:
+            if inter_set.contains(element) is False:
+                difference_set.add(element)
+
+        return difference_set
 

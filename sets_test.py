@@ -50,9 +50,20 @@ class SetTests(unittest.TestCase):
 
     def test_intersection(self):
         s = Set(['A', 'B', 'C'])
-        other_set = Set(['A', 'C'])
+        other_set = Set(['A', 'C', 'D'])
         inter_set = s.intersection(other_set)
         assert inter_set.size() == 2
         assert inter_set.contains('A') is True
         assert inter_set.contains('C') is True
         assert inter_set.contains('B') is False
+
+    def test_difference(self):
+        s = Set(['A', 'B', 'C'])
+        other_set = Set(['A', 'C', 'D'])
+        diff_set = s.difference(other_set)
+        assert diff_set.size() == 2
+        assert diff_set.contains('B') is True
+        assert diff_set.contains('D') is True
+        assert diff_set.contains('A') is False
+        assert diff_set.contains('C') is False
+
