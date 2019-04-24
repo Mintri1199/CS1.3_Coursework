@@ -67,3 +67,14 @@ class SetTests(unittest.TestCase):
         assert diff_set.contains('A') is False
         assert diff_set.contains('C') is False
 
+    def test_is_subset_positive(self):
+        s = Set(['A', 'B', 'C'])
+        other_set = Set(['A', 'C'])
+        assert s.is_subset(other_set) is True
+
+    def test_is_subset_negative(self):
+        s = Set(['A', 'B', 'C'])
+        ill_set = Set(['A', 'B', 'C', 'D'])
+        not_sub_set = Set(['D', 'C'])
+        assert s.is_subset(ill_set) is False
+        assert s.is_subset(not_sub_set) is False
