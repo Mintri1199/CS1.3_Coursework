@@ -36,3 +36,14 @@ class SetTests(unittest.TestCase):
         assert s.contains('A') is False
         with self.assertRaises(KeyError):  # Raise error since D does not exist to remove
             s.remove('D')
+
+    def test_union(self):
+        s = Set(['A', 'B', 'C'])
+        other_set = Set(['D', 'A', 'C'])
+        union_set = s.union(other_set)
+        assert union_set.size() == 4
+        assert union_set.contains('A') is True
+        assert union_set.contains('B') is True
+        assert union_set.contains('C') is True
+        assert union_set.contains('D') is True
+        assert union_set.contains('E') is False
