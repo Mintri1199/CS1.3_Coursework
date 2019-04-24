@@ -56,3 +56,26 @@ class Set:
 
         return union_set
 
+    def intersection(self, other_set):
+        """Assuming the input is a Set object, use iterable to make union easier
+            Return a new set that only contains the common elements between two sets"""
+        intersection_set = Set()  # Initialize a new empty set
+
+        bigger_set = None
+        smaller_set = None
+
+        # Determining which sets is bigger
+        if other_set.size() >= self.size():
+            bigger_set = other_set
+            smaller_set = self
+
+        else:
+            bigger_set = self
+            smaller_set = other_set
+
+        for item in smaller_set:  # item = key
+            if bigger_set.contains(item):
+                intersection_set.add(item)
+
+        return intersection_set
+

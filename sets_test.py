@@ -10,9 +10,9 @@ class SetTests(unittest.TestCase):
 
     def test_init_with_list(self):
         s = Set(['A', 'B', 'C'])
-        ds = Set(['A', 'A', 'C'])
+        duplicate_input_set = Set(['A', 'A', 'C'])
         assert s.size() == 3
-        assert ds.size() == 2  # Don't add the duplicate
+        assert duplicate_input_set.size() == 2  # Don't add the duplicate
 
     def test_contains(self):
         s = Set(['A', 'B', 'C'])
@@ -47,3 +47,12 @@ class SetTests(unittest.TestCase):
         assert union_set.contains('C') is True
         assert union_set.contains('D') is True
         assert union_set.contains('E') is False
+
+    def test_intersection(self):
+        s = Set(['A', 'B', 'C'])
+        other_set = Set(['A', 'C'])
+        inter_set = s.intersection(other_set)
+        assert inter_set.size() == 2
+        assert inter_set.contains('A') is True
+        assert inter_set.contains('C') is True
+        assert inter_set.contains('B') is False
