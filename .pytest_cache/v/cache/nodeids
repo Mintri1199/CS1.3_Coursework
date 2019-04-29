@@ -1,12 +1,4 @@
 [
-  "sets_test.py::SetTests::test_add",
-  "sets_test.py::SetTests::test_contains",
-  "sets_test.py::SetTests::test_difference",
-  "sets_test.py::SetTests::test_init",
-  "sets_test.py::SetTests::test_init_with_list",
-  "sets_test.py::SetTests::test_intersection",
-  "sets_test.py::SetTests::test_is_subset_negative",
-  "sets_test.py::SetTests::test_is_subset_positive",
-  "sets_test.py::SetTests::test_remove",
-  "sets_test.py::SetTests::test_union"
+  "redact_test.py::RedactTest::test_duplicate",
+  "redact_test.py::RedactTest::test_positive"
 ]

@@ -60,7 +60,16 @@ class SetTests(unittest.TestCase):
     def test_difference(self):
         s = Set(['A', 'B', 'C'])
         other_set = Set(['A', 'C', 'D'])
-        diff_set = s.difference(other_set)
+        diff_s = s.difference(other_set)
+        assert diff_s.size() == 1
+        assert diff_s.contains('B') is True
+        assert diff_s.contains('A') is False
+        assert diff_s.contains('C') is False
+
+    def test_symmetric_difference(self):
+        s = Set(['A', 'B', 'C'])
+        other_set = Set(['A', 'C', 'D'])
+        diff_set = s.symmetric_difference(other_set)
         assert diff_set.size() == 2
         assert diff_set.contains('B') is True
         assert diff_set.contains('D') is True

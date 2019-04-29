@@ -53,7 +53,7 @@ def decode(digits, base):
     #     power_value = base**power_index  # The result of the base in the power of the power index
     #     char = digits[power_index]  # Get the character of the digits string using the power index
     #     numerical_value = string.printable.find(char)  # Get the numerical value of the selected character
-    #     result += power_value * numerical_value  # Increment result with the product of (base**power) * numerical value
+    #     result += power_value * numerical_value  # Increment result with the product of (base**power)*numerical value
     #
     #
     # power = 0
@@ -117,6 +117,8 @@ def decode(digits, base):
 #
 #     return encode_str
 
+
+# TODO: Add Comments and annotate complexity this file
 # Encoding function from Zurich Okoren after bugs fixed by me
 def encode(number, base):
     """Encode given number in base 10 to digits in given base.
