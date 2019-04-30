@@ -24,5 +24,10 @@ class RedactTest(unittest.TestCase):
         assert filter_array.count('A') == 0
         assert len(filter_array) == 4
 
+    def test_punctuation(self):
+        text_array = 'A a a jump over the dog.'.split()
+        banned_word = ['dog']
+        filter_array = redact_words(text_array, banned_word)
 
+        assert 'dog.' not in filter_array
 

@@ -264,9 +264,11 @@ class BasesConvertTest(unittest.TestCase):
         assert convert('1110101001100010', 2, 16) == 'ea62'
         assert convert('1111101101110011', 2, 16) == 'fb73'
 
-    # TODO: Add 
+    # TODO: Add test for fractional functionality
+
     def test_factions(self):
         pass
+
 
 if __name__ == '__main__':
     unittest.main()

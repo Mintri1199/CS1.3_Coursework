@@ -137,10 +137,8 @@ def find_all_indexes(text, pattern):
 def test_string_algorithms(text, pattern):
     found = contains(text, pattern)
     print('contains({!r}, {!r}) => {}'.format(text, pattern, found))
-    # TODO: Uncomment these lines after you implement find_index
     index = find_index(text, pattern)
     print('find_index({!r}, {!r}) => {}'.format(text, pattern, index))
-    # TODO: Uncomment these lines after you implement find_all_indexes
     indexes = find_all_indexes(text, pattern)
     print('find_all_indexes({!r}, {!r}) => {}'.format(text, pattern, indexes))
 
@@ -166,8 +164,3 @@ def main():
 #
 if __name__ == '__main__':
     main()
-
-# print(contains('ababc', 'abc'))
-#
-#
-# print(find_all_indexes('ababc', 'abc'))

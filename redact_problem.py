@@ -18,3 +18,9 @@ def redact_words(words, banned_words):  # O(n + m) -> O(n)
             filtered_words.append(word)  # O(1)
 
     return filtered_words  # O(1)
+
+
+text_array = 'A a a jump over the dog.'.split()
+banned_word = ['dog']
+filter_array = redact_words(text_array, banned_word)
+print(filter_array)
