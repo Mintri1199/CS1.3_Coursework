@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9672c880-565f-4ea1-9b25-fd977d7036e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/binarytree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binarytree_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/lastfailed" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bases_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/bases_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redact_problem.py" beforeDir="false" afterPath="$PROJECT_DIR$/redact_problem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redact_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/redact_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reworked_strings.py" beforeDir="false" afterPath="$PROJECT_DIR$/reworked_strings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/binarytree.py" beforeDir="false" afterPath="$PROJECT_DIR$/binarytree.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,19 +40,19 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="240" />
-          <entry key="py" value="31446" />
+          <entry key="py" value="33564" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="31686" />
+          <entry key="Python" value="33804" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reworked_strings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1088">
@@ -84,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bases.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+            <state relative-caret-position="55">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#24#103#0" />
                 <element signature="e#836#898#0" />
@@ -95,14 +90,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/binarytree.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="41" column="45" selection-end-line="389" selection-end-column="29" />
+              <folding>
+                <marker date="1556665117759" expanded="true" signature="10711:10878" ph="..." />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/binarytree_test.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -170,10 +179,10 @@
         <option value="$PROJECT_DIR$/bases.py" />
         <option value="$PROJECT_DIR$/redact_problem.py" />
         <option value="$PROJECT_DIR$/redact_test.py" />
-        <option value="$PROJECT_DIR$/binarytree.py" />
-        <option value="$PROJECT_DIR$/binarytree_test.py" />
         <option value="$PROJECT_DIR$/bases_test.py" />
         <option value="$PROJECT_DIR$/reworked_strings.py" />
+        <option value="$PROJECT_DIR$/binarytree_test.py" />
+        <option value="$PROJECT_DIR$/binarytree.py" />
       </list>
     </option>
   </component>
@@ -231,50 +240,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in redact_test.py">
-    <configuration name="redact_problem" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="course_works" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/redact_problem.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sets" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="course_works" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sets.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for redact_test.RedactTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for binarytree_test.BinaryTreeNodeTest.test_height">
+    <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_height" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="course_works" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -284,11 +251,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;redact_test.RedactTest&quot;" />
+      <option name="_new_target" value="&quot;binarytree_test.BinaryTreeNodeTest.test_height&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for sets_test.SetTests.test_intersection" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_init" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="course_works" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -298,7 +265,35 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;sets_test.SetTests.test_intersection&quot;" />
+      <option name="_new_target" value="&quot;binarytree_test.BinaryTreeNodeTest.test_init&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_is_branch" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="course_works" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;binarytree_test.BinaryTreeNodeTest.test_is_branch&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_is_leaf" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="course_works" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;binarytree_test.BinaryTreeNodeTest.test_is_leaf&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -317,19 +312,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.sets" />
-      <item itemvalue="Python tests.Unittests for sets_test.SetTests.test_intersection" />
       <item itemvalue="Python tests.Unittests in redact_test.py" />
-      <item itemvalue="Python tests.Unittests for redact_test.RedactTest" />
-      <item itemvalue="Python.redact_problem" />
+      <item itemvalue="Python tests.Unittests for binarytree_test.BinaryTreeNodeTest.test_init" />
+      <item itemvalue="Python tests.Unittests for binarytree_test.BinaryTreeNodeTest.test_is_leaf" />
+      <item itemvalue="Python tests.Unittests for binarytree_test.BinaryTreeNodeTest.test_is_branch" />
+      <item itemvalue="Python tests.Unittests for binarytree_test.BinaryTreeNodeTest.test_height" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for binarytree_test.BinaryTreeNodeTest.test_height" />
+        <item itemvalue="Python tests.Unittests for binarytree_test.BinaryTreeNodeTest.test_is_branch" />
+        <item itemvalue="Python tests.Unittests for binarytree_test.BinaryTreeNodeTest.test_is_leaf" />
+        <item itemvalue="Python tests.Unittests for binarytree_test.BinaryTreeNodeTest.test_init" />
         <item itemvalue="Python tests.Unittests in redact_test.py" />
-        <item itemvalue="Python.redact_problem" />
-        <item itemvalue="Python tests.Unittests for redact_test.RedactTest" />
-        <item itemvalue="Python.sets" />
-        <item itemvalue="Python tests.Unittests for sets_test.SetTests.test_intersection" />
       </list>
     </recent_temporary>
   </component>
@@ -347,35 +342,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_sets_test_SetTests_test_intersection - 2019.04.23 at 18h 37m 20s.xml">
-      <configuration name="Unittests for sets_test.SetTests.test_intersection" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_sets_test_SetTests_test_intersection - 2019.04.23 at 18h 38m 29s.xml">
-      <configuration name="Unittests for sets_test.SetTests.test_intersection" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_sets_test_SetTests_test_difference - 2019.04.23 at 18h 49m 20s.xml">
-      <configuration name="Unittests for sets_test.SetTests.test_difference" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_sets_test_SetTests_test_intersection - 2019.04.23 at 19h 04m 58s.xml">
-      <configuration name="Unittests for sets_test.SetTests.test_intersection" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_sets_test_SetTests - 2019.04.23 at 19h 05m 03s.xml">
-      <configuration name="Unittests for sets_test.SetTests" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_sets_test_SetTests_test_intersection - 2019.04.23 at 19h 07m 01s.xml">
-      <configuration name="Unittests for sets_test.SetTests.test_intersection" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_redact_test_py - 2019.04.29 at 13h 59m 48s.xml">
-      <configuration name="Unittests in redact_test.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_redact_test_py - 2019.04.29 at 14h 00m 47s.xml">
-      <configuration name="Unittests in redact_test.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_redact_test_RedactTest - 2019.04.29 at 14h 05m 30s.xml">
       <configuration name="Unittests for redact_test.RedactTest" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_redact_test_py - 2019.04.29 at 14h 26m 07s.xml">
       <configuration name="Unittests in redact_test.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_binarytree_test_BinaryTreeNodeTest_test_init - 2019.04.30 at 15h 23m 09s.xml">
+      <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_init" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_binarytree_test_BinaryTreeNodeTest_test_is_leaf - 2019.04.30 at 15h 23m 12s.xml">
+      <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_is_leaf" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_binarytree_test_BinaryTreeNodeTest_test_is_branch - 2019.04.30 at 15h 23m 33s.xml">
+      <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_is_branch" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_binarytree_test_BinaryTreeNodeTest_test_height - 2019.04.30 at 15h 59m 08s.xml">
+      <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_height" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_binarytree_test_BinaryTreeNodeTest_test_height - 2019.04.30 at 15h 59m 37s.xml">
+      <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_height" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_binarytree_test_BinaryTreeNodeTest_test_height - 2019.04.30 at 15h 59m 46s.xml">
+      <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_height" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_binarytree_test_BinaryTreeNodeTest_test_height - 2019.04.30 at 16h 00m 40s.xml">
+      <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_height" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_binarytree_test_BinaryTreeNodeTest_test_height - 2019.04.30 at 16h 00m 44s.xml">
+      <configuration name="Unittests for binarytree_test.BinaryTreeNodeTest.test_height" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -389,6 +384,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13744076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -401,7 +397,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32949087" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" x="10" y="77" width="1899" height="1025" id="Terminal" order="8" sideWeight="0.4997367" weight="0.32971996" />
+      <window_info anchor="bottom" x="10" y="77" width="1899" height="1025" id="Terminal" order="8" sideWeight="0.4997367" weight="0.35049683" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5002633" side_tool="true" weight="0.13677812" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32791328" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -649,24 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/binarytree.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/binarytree_test.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bases.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
-          <folding>
-            <element signature="e#24#103#0" />
-            <element signature="e#836#898#0" />
-            <element signature="e#1138#1208#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -711,6 +689,38 @@
             <element signature="e#1377#1414#0" />
             <element signature="e#2952#2989#0" />
             <element signature="e#4290#4317#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bases.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#24#103#0" />
+            <element signature="e#836#898#0" />
+            <element signature="e#1138#1208#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/binarytree_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/binarytree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="41" column="45" selection-end-line="389" selection-end-column="29" />
+          <folding>
+            <marker date="1556665117759" expanded="true" signature="10711:10878" ph="..." />
           </folding>
         </state>
       </provider>

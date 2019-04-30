@@ -1,1 +1,3 @@
-{}
+{
+  "binarytree_test.py::BinarySearchTreeTest::test_init_with_list": true
+}
