@@ -93,35 +93,25 @@ class BinarySearchTree(object):
         """Insert the given item in order into this binary search tree.
         Best case running time: O(1) is the tree is empty
         Worst case running time: O(log2n) since the program have to do binary search to find the parent node"""
+        new_node = BinaryTreeNode(item)
         # Handle the case where the tree is empty
         if self.is_empty():
             # Create a new root node
-            self.root = BinaryTreeNode(item)
+            self.root = new_node
             # Increase the tree size
             self.size += 1
             return
         # Find the parent node of where the given item should be inserted
-        parent = self._find_parent_node_recursive(item, self.root)
+        parent = self._find_parent_node_recursive(item, self.root)  # Could be None if root doesn't have any child nodes
 
-        # Determine if we are inserting after the root node or not
-        if parent is None:
-            # Check if the given item should be inserted left of parent node
-            if self.root.data > item:
-                # Create a new node and set the parent's left child
-                self.root.left = BinaryTreeNode(item)
-            # Check if the given item should be inserted right of parent node
-            elif self.root.data < item:
-                # Create a new node and set the parent's right child
-                self.root.right = BinaryTreeNode(item)
-        else:
-            # Check if the given item should be inserted left of parent node
-            if parent.data > item:
-                # Create a new node and set the parent's left child
-                parent.left = BinaryTreeNode(item)
-            # Check if the given item should be inserted right of parent node
-            elif parent.data < item:
-                # Create a new node and set the parent's right child
-                parent.right = BinaryTreeNode(item)
+        # Check if the given item should be inserted left of parent node
+        if parent.data > item:
+            # Create a new node and set the parent's left child
+            parent.left = new_node
+        # Check if the given item should be inserted right of parent node
+        elif parent.data < item:
+            # Create a new node and set the parent's right child
+            parent.right = new_node
         # Increase the tree size
         self.size += 1
 
@@ -209,7 +199,9 @@ class BinarySearchTree(object):
         # Check if starting node exists
         if node is None:
             # Not found (base case)
-            return parent
+            if parent:
+                return parent
+            return None
         # Check if the given item matches the node's data
         if node.data == item:
             # Return the parent of the found node
