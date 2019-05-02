@@ -9,6 +9,8 @@
   "binarytree_test.py::BinarySearchTreeTest::test_init_with_list_of_tuples",
   "binarytree_test.py::BinarySearchTreeTest::test_insert_with_3_items",
   "binarytree_test.py::BinarySearchTreeTest::test_insert_with_7_items",
+  "binarytree_test.py::BinarySearchTreeTest::test_items_in_order_with_3_strings",
+  "binarytree_test.py::BinarySearchTreeTest::test_items_in_order_with_7_numbers",
   "binarytree_test.py::BinarySearchTreeTest::test_search_with_3_items",
   "binarytree_test.py::BinarySearchTreeTest::test_search_with_3_strings",
   "binarytree_test.py::BinarySearchTreeTest::test_search_with_7_items",

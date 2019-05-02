@@ -20,8 +20,8 @@ class BinaryTreeNode(object):
 
     def height(self):
         """Return the height of this node (the number of edges on the longest
-        downward path from this node to a descendant leaf node).
-        TODO: Best and worst case running time: ??? under what conditions?"""
+               downward path from this node to a descendant leaf node).
+               Best and worst case running time: O(n) where n is the number of nodes in the tree"""
         # Check if the node has a child or not
         if self.right is None and self.left is None:
             return 0
@@ -29,17 +29,18 @@ class BinaryTreeNode(object):
         left_side = 0
         right_side = 0
 
-        # TODO: Check if left child has a value and if so calculate its height
+        # Check if left child has a value and if so calculate its height
         if self.left is not None:
             left_side += self.left.height()
 
 
-        # TODO: Check if right child has a value and if so calculate its height
+        # Check if right child has a value and if so calculate its height
         if self.right is not None:
             right_side += self.right.height()
 
         # Return one more than the greater of the left height and right height
         return max(left_side, right_side) + 1
+
 
 class BinarySearchTree(object):
 
@@ -67,8 +68,6 @@ class BinarySearchTree(object):
         # Check if root node has a value and if so calculate its height
         if self.is_empty() is False and self.root.left is not None or self.root.right is not None:
             pass
-
-
 
     def contains(self, item):
         """Return True if this binary search tree contains the given item.
@@ -222,19 +221,25 @@ class BinarySearchTree(object):
         # TODO: Use helper methods and break this algorithm down into 3 cases
         # based on how many children the node containing the given item has and
         # implement new helper methods for subtasks of the more complex cases
+        parent_node = self._find_parent_node_iterative(item)
 
     def deleting_with_one_child(self, parent, child_node, target_node):
         """Helper function that cover a case when deleting a node with one child."""
+        # But what if the targeted node is the root?
+        if parent == target_node:
+            self.root = child_node
+            target_node.right = None
+            target_node.left = None
 
         # Determine which side the child node goes after deletion
-        if parent.left == target_node:
+        elif parent.left == target_node:
             parent.left = child_node
 
             # Maybe this can be written once in self.delete
             target_node.right = None
             target_node.left = None
 
-        elif parent.right == target_node:
+        else:
             parent.right = child_node
             target_node.right = None
             target_node.left = None
@@ -243,6 +248,7 @@ class BinarySearchTree(object):
         """Helper function that cover a case when deleting a node with two children."""
         new_succ = target_node.right
         new_succ.left = target_node
+
 
     def items_in_order(self):
         """Return an in-order list of all items in this binary search tree."""
@@ -258,12 +264,15 @@ class BinarySearchTree(object):
         Start at the given node and visit each node with the given function.
         TODO: Running time: ??? Why and under what conditions?
         TODO: Memory usage: ??? Why and under what conditions?"""
-        # TODO: Traverse left subtree, if it exists
-        ...
-        # TODO: Visit this node's data with given function
-        ...
-        # TODO: Traverse right subtree, if it exists
-        ...
+        if node is not None:
+            # Traverse left subtree, if it exists
+            self._traverse_in_order_recursive(node.left, visit)
+            # Visit this node's data with given function
+            visit(node.data)
+            # Traverse right subtree, if it exists
+            self._traverse_in_order_recursive(node.right, visit)
+
+        return
 
     def _traverse_in_order_iterative(self, node, visit):
         """Traverse this binary tree with iterative in-order traversal (DFS).
@@ -361,8 +370,8 @@ class BinarySearchTree(object):
 def test_binary_search_tree():
     # Create a complete binary search tree of 3, 7, or 15 items in level-order
     # items = [2, 1, 3]
-    items = [4, 2, 6, 1, 3, 5, 7]
-    # items = [8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15]
+    # items = [4, 2, 6, 1, 3, 5, 7]
+    items = [8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15]
     print('items: {}'.format(items))
 
     tree = BinarySearchTree()
