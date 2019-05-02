@@ -1,5 +1,5 @@
 from my_queue import LinkedQueue
-
+from stack import Stack
 
 class BinaryTreeNode(object):
 
@@ -253,7 +253,7 @@ class BinarySearchTree(object):
         items = []
         if not self.is_empty():
             # Traverse tree in-order from root, appending each node's item
-            self._traverse_in_order_recursive(self.root, items.append)
+            self._traverse_in_order_iterative(self.root, items.append)
         # Return in-order list of all items in tree
         return items
 
@@ -279,12 +279,36 @@ class BinarySearchTree(object):
         TODO: Memory usage: ??? Why and under what conditions?"""
         # TODO: Traverse in-order without using recursion (stretch challenge)
 
+        current_node = node  # start out as root node
+        stack = Stack()  # Initialize empty stack
+
+        done = False  # Set a flag to see if the program traversed through the entire tree
+
+        while not done:
+
+            if current_node is not None:  # Add the left node to the stack and assign it to the current node
+                stack.push(current_node)
+                current_node = current_node.left
+
+            else:  # signaling that it's time to go back
+
+                if not stack.is_empty():  # Not done traversing the tree
+
+                    current_node = stack.pop()  # Get the node on top of the stack
+
+                    visit(current_node.data)  # Use the data
+
+                    current_node = current_node.right  # Then set the current node to it's right child
+
+                else:  # signaling the function has traverse through the tree
+                    done = True
+
     def items_pre_order(self):
         """Return a pre-order list of all items in this binary search tree."""
         items = []
         if not self.is_empty():
             # Traverse tree pre-order from root, appending each node's item
-            self._traverse_pre_order_recursive(self.root, items.append)
+            self._traverse_pre_order_iterative(self.root, items.append)
         # Return pre-order list of all items in tree
         return items
 
@@ -308,12 +332,32 @@ class BinarySearchTree(object):
         TODO: Memory usage: ??? Why and under what conditions?"""
         # TODO: Traverse pre-order without using recursion (stretch challenge)
 
+        current_node = node
+        done = False
+        stack = Stack()
+
+        while not done:
+
+            if current_node is not None:
+                visit(current_node.data)  # First Use the data
+                stack.push(current_node)  # Then push the current node to the stack
+                current_node = current_node.left  # Then assign the current node to the left child
+
+            else:
+
+                if not stack.is_empty():
+                    current_node = stack.pop()  # Assign the current node to the last parent node on the stack
+                    current_node = current_node.right  # Then assign the current node to the right child
+
+                else:
+                    done = True
+
     def items_post_order(self):
         """Return a post-order list of all items in this binary search tree."""
         items = []
         if not self.is_empty():
             # Traverse tree post-order from root, appending each node's item
-            self._traverse_post_order_recursive(self.root, items.append)
+            self._traverse_post_order_iterative(self.root, items.append)
         # Return post-order list of all items in tree
         return items
 
@@ -336,6 +380,34 @@ class BinarySearchTree(object):
         TODO: Running time: ??? Why and under what conditions?
         TODO: Memory usage: ??? Why and under what conditions?"""
         # TODO: Traverse post-order without using recursion (stretch challenge)
+        current_node = node
+        stack = Stack()
+        done = False
+        # I still don't understand this algorithm from GeeksforGeeks
+        while not done:
+
+            while current_node:
+
+                if current_node.right:
+                    stack.push(current_node.right)
+
+                stack.push(current_node)
+                current_node = current_node.left
+
+            current_node = stack.pop()
+
+            if current_node.right and stack.peek() == current_node.right:
+                stack.pop()
+                stack.push(current_node)
+                current_node = current_node.right
+            else:
+                visit(current_node.data)
+                current_node = None
+
+            if stack.is_empty():
+                done = True
+
+
 
     def items_level_order(self):
         """Return a level-order list of all items in this binary search tree."""
