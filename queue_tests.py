@@ -1,4 +1,4 @@
-from queue import Queue
+from my_queue import Queue
 import unittest
 
 

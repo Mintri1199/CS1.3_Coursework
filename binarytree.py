@@ -1,3 +1,6 @@
+from my_queue import LinkedQueue
+
+
 class BinaryTreeNode(object):
 
     def __init__(self, data):
@@ -20,8 +23,8 @@ class BinaryTreeNode(object):
 
     def height(self):
         """Return the height of this node (the number of edges on the longest
-               downward path from this node to a descendant leaf node).
-               Best and worst case running time: O(n) where n is the number of nodes in the tree"""
+        downward path from this node to a descendant leaf node).
+        Best and worst case running time: O(n) where n is the number of nodes in the tree"""
         # Check if the node has a child or not
         if self.right is None and self.left is None:
             return 0
@@ -32,7 +35,6 @@ class BinaryTreeNode(object):
         # Check if left child has a value and if so calculate its height
         if self.left is not None:
             left_side += self.left.height()
-
 
         # Check if right child has a value and if so calculate its height
         if self.right is not None:
@@ -63,16 +65,14 @@ class BinarySearchTree(object):
     def height(self):
         """Return the height of this tree (the number of edges on the longest
         downward path from this tree's root node to a descendant leaf node).
-        TODO: Best and worst case running time: ??? under what conditions?"""
-
-        # Check if root node has a value and if so calculate its height
-        if self.is_empty() is False and self.root.left is not None or self.root.right is not None:
-            pass
+        Best and worst case running time: O(n) where n is the number nodes in the tree"""
+        return self.root.height()
 
     def contains(self, item):
         """Return True if this binary search tree contains the given item.
         Best case running time: O(1) if the targeted item is in the root node
-        Worst case running time: O(log2n) since the search size is reduced by half with each iteration"""
+        Worst case running time: O(log2n) since the search size is reduced by half with each iteration
+                                n is the number of nodes in the tree"""
         # Find a node with the given item, if any
         node = self._find_node_recursive(item, self.root)
         # Return True if a node was found, or False
@@ -82,16 +82,19 @@ class BinarySearchTree(object):
         """Return an item in this binary search tree matching the given item,
         or None if the given item is not found.
         Best case running time: O(1) if the targeted item is in the root node
-        Worst case running time: O(log2n) since the search size is reduced by half with each iteration"""
+        Worst case running time: O(log2n) since the search size is reduced by half with each iteration
+                                n is the number of nodes in the tree"""
         # Find a node with the given item, if any
         node = self._find_node_recursive(item, self.root)
+        # node = self._find_parent_node_iterative(item)
         # Return the node's data if found, or None
         return node.data if node is not None else None
 
     def insert(self, item):
         """Insert the given item in order into this binary search tree.
         Best case running time: O(1) is the tree is empty
-        Worst case running time: O(log2n) since the program have to do binary search to find the parent node"""
+        Worst case running time: O(log2n) since the program have to do binary search to find the parent node
+                                 n is the number of nodes in the tree"""
         new_node = BinaryTreeNode(item)
         # Handle the case where the tree is empty
         if self.is_empty():
@@ -200,7 +203,9 @@ class BinarySearchTree(object):
             # Not found (base case)
             if parent:
                 return parent
-            return None
+            else:
+                return None
+
         # Check if the given item matches the node's data
         if node.data == item:
             # Return the parent of the found node
@@ -221,25 +226,19 @@ class BinarySearchTree(object):
         # TODO: Use helper methods and break this algorithm down into 3 cases
         # based on how many children the node containing the given item has and
         # implement new helper methods for subtasks of the more complex cases
-        parent_node = self._find_parent_node_iterative(item)
 
     def deleting_with_one_child(self, parent, child_node, target_node):
         """Helper function that cover a case when deleting a node with one child."""
-        # But what if the targeted node is the root?
-        if parent == target_node:
-            self.root = child_node
-            target_node.right = None
-            target_node.left = None
 
         # Determine which side the child node goes after deletion
-        elif parent.left == target_node:
+        if parent.left == target_node:
             parent.left = child_node
 
             # Maybe this can be written once in self.delete
             target_node.right = None
             target_node.left = None
 
-        else:
+        elif parent.right == target_node:
             parent.right = child_node
             target_node.right = None
             target_node.left = None
@@ -247,8 +246,7 @@ class BinarySearchTree(object):
     def deleting_with_two_child(self, parent, target_node):
         """Helper function that cover a case when deleting a node with two children."""
         new_succ = target_node.right
-        new_succ.left = target_node
-
+        new_succ.left = target_node.left
 
     def items_in_order(self):
         """Return an in-order list of all items in this binary search tree."""
@@ -295,12 +293,13 @@ class BinarySearchTree(object):
         Start at the given node and visit each node with the given function.
         TODO: Running time: ??? Why and under what conditions?
         TODO: Memory usage: ??? Why and under what conditions?"""
-        # TODO: Visit this node's data with given function
-        ...
-        # TODO: Traverse left subtree, if it exists
-        ...
-        # TODO: Traverse right subtree, if it exists
-        ...
+        if node is not None:
+            # Visit this node's data with given function
+            visit(node.data)
+            # Traverse left subtree, if it exists
+            self._traverse_pre_order_recursive(node.left, visit)
+            # Traverse right subtree, if it exists
+            self._traverse_pre_order_recursive(node.right, visit)
 
     def _traverse_pre_order_iterative(self, node, visit):
         """Traverse this binary tree with iterative pre-order traversal (DFS).
@@ -323,12 +322,13 @@ class BinarySearchTree(object):
         Start at the given node and visit each node with the given function.
         TODO: Running time: ??? Why and under what conditions?
         TODO: Memory usage: ??? Why and under what conditions?"""
-        # TODO: Traverse left subtree, if it exists
-        ...
-        # TODO: Traverse right subtree, if it exists
-        ...
-        # TODO: Visit this node's data with given function
-        ...
+        if node is not None:
+            # Traverse left subtree, if it exists
+            self._traverse_post_order_recursive(node.left, visit)
+            # Traverse right subtree, if it exists
+            self._traverse_post_order_recursive(node.right, visit)
+            # Visit this node's data with given function
+            visit(node.data)
 
     def _traverse_post_order_iterative(self, node, visit):
         """Traverse this binary tree with iterative post-order traversal (DFS).
@@ -351,27 +351,29 @@ class BinarySearchTree(object):
         Start at the given node and visit each node with the given function.
         TODO: Running time: ??? Why and under what conditions?
         TODO: Memory usage: ??? Why and under what conditions?"""
-        # TODO: Create queue to store nodes not yet traversed in level-order
-        queue = ...
-        # TODO: Enqueue given starting node
-        ...
-        # TODO: Loop until queue is empty
-        while ...:
-            # TODO: Dequeue node at front of queue
-            node = ...
-            # TODO: Visit this node's data with given function
-            ...
-            # TODO: Enqueue this node's left child, if it exists
-            ...
-            # TODO: Enqueue this node's right child, if it exists
-            ...
+        # Create queue to store nodes not yet traversed in level-order
+        queue = LinkedQueue()
+        # Enqueue given starting node
+        queue.enqueue(start_node)
+        # Loop until queue is empty
+        while queue.is_empty() is False:
+            # Dequeue node at front of queue
+            node = queue.dequeue()
+            # Visit this node's data with given function
+            visit(node.data)
+            # Enqueue this node's left child, if it exists
+            if node.left:
+                queue.enqueue(node.left)
+            # Enqueue this node's right child, if it exists
+            if node.right:
+                queue.enqueue(node.right)
 
 
 def test_binary_search_tree():
     # Create a complete binary search tree of 3, 7, or 15 items in level-order
     # items = [2, 1, 3]
-    # items = [4, 2, 6, 1, 3, 5, 7]
-    items = [8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15]
+    items = [4, 2, 6, 1, 3, 5, 7]
+    # items = [8, 4, 12, 2, 6, 10, 14, 1, 3, 5, 7, 9, 11, 13, 15]
     print('items: {}'.format(items))
 
     tree = BinarySearchTree()
